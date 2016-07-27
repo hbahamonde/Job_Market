@@ -1,0 +1,231 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Hector Bahamonde}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+% \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {political science, economic development, methods},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{{\tiny \name}}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+%{\huge \name}
+
+% Alternatively, print name centered and bold:
+\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  \href{http://www.rutgers.edu/}{Rutgers University, New Brunswick} \\
+  Political Science Department \\
+  Hickman Hall \\
+  New Brunswick, NJ 08901
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    \texttt{p}: & (732) 318-9650 \\
+    \texttt{e}: & \href{mailto:hector.bahamonde@rutgers.edu}{Hector.Bahamonde@Rutgers.edu} \\
+    \texttt{w}: & \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com} \\
+  \end{tabular}
+\end{minipage}
+
+
+%\section*{Personal}
+%
+%\begin{itemize}
+%\item Born on November 4th, 1984.
+%\item Chilean Citizen.
+%\end{itemize}
+
+
+\section*{Education}
+
+\begin{itemize}
+  \item Ph.D. Political Science, Rutgers University (2017, expected).
+  	\begin{itemize}
+  		\item \texttt{Mayor}: \emph{\small comparative politics}, \texttt{Minor}: \emph{\small quantitative methods}.
+	\end{itemize}
+
+  \item M.A. Political Science, Rutgers University, 2014.
+
+  \item B.A. Political Science, Pontifical Catholic University of Chile, 2009.
+\end{itemize}
+
+
+%\section*{Employment}
+%
+%\begin{itemize}
+%\item PLACE
+%\end{itemize}
+
+
+\section*{Research}
+
+\emph{Research Interests: comparative political economy, economic development and Latin American politics, causal inference and quantitative methods}.
+
+\subsection*{Dissertation}
+
+The dissertation argues that the modernization of the fiscal apparatus was product of an inter-elite bargaining process between the agricultural and industrial classes. The dissertation is embedded into a larger book project where I analyze how these structural transformations helped states to make institutional investments that lead to the formation of states with higher capacities. Using fine-grained historical case study comparisons, sectoral outputs from 1900 to the present, time-series econometric techniques and a novel earthquake dataset (to measure state capacities), I find that industrialization challenged the traditional sector, creating the incentives to self-impose state institutions.
+
+
+
+\subsection*{Peer-Reviewed Journal Articles}
+
+\begin{itemize}
+\item Aiming Right At You: Group vs. Individual Clientelistic Targeting in Brazil, {\it Latin American Politics and Society}, forthcomming.
+\item Pilar Giannini, Hector Bahamonde, Juan Pablo Luna, Rodolfo L\'opez, Mart\'in Ordonez, Gonzalo Recart. 2011.\emph{El Secreto de mi \'Exito: Parte II. Los Caminos a Valpara\'iso en 2009}. Revista de Ciencia Pol\'itica. 31(2), 285-310, 2010.
+\end{itemize}
+
+\subsection*{Working Papers}
+
+\begin{itemize}
+\item Hector Bahamonde. \emph{Does the US have Healthier Democratic Values? Measuring Vote-Selling Elasticities Using a List and Conjoint Experiments}.
+\item Hector Bahamonde. \emph{Structural Transformations and The Political Roots of Fiscal Capacities in Latin America}.
+\item Hector Bahamonde. \emph{Inter-Sectoral Competition and State Capacities in Latin America: The Negative Link between the Industrial and the Agricultural Sectors}.
+\item Hector Bahamonde. \emph{Measuring State Capacities in LA using an Infrastructural Approach: Earthquakes and Institutional Development, 1900-2000}.
+\item Richard Lau (Rutgers), Mona Kleinberg (UMass - Lowell), Hector Bahamonde (Rutgers). \emph{Testing the Online Model of Candidate Evaluation in a More Realistic Environment}.
+\end{itemize}
+
+\subsection*{Other Publications}
+
+\begin{itemize}
+\item Juan Pablo Luna, Hector Bahamonde, Germ\'an Bidegain, Roody Reserve, Giancarlo Visconti. \emph{?`Estable Pero Sin Ra\'ices? Los Partidos Pol\'iticos Chilenos en la Opini\'on P\'ublica}, in \emph{Cultura Pol\'itica de la Democracia en Chile, LAPOP Country Report, 2010}.
+\end{itemize}
+
+\subsection*{Conferences}
+
+\begin{itemize}
+\item American Political Science Association (APSA): 2016.
+\item Latin American Studies Association (LASA): 2014, 2015, 2016.
+\item Western Political Science Association (WPSA): 2015, 2016.
+\item Southern Political Science Association (SPSA): 2015.
+\end{itemize}
+
+
+\section*{Grants, Fellowships, \& Awards}
+
+\begin{itemize}
+\item Conference Travel Support (2013, 2014, 2015, 2016)
+\item Teaching Assistantship Appointment (2015, 2016, 2017).
+\item Small Grant Fund for Research on Latin America (Center for Latin American Studies, Rutgers).
+\item Teaching Assistant Professional Development Fund (2015, 2016).
+\item Pre-Dissertation Award (2016).
+\item Experimental Workshop Award (2015).
+\item Jerome M. Clubb Scholarship (2013, ICPSR).
+\item Excellence Fellowship: full tuition plus health benefits (2012, Graduate School, Rutgers).
+\end{itemize}
+
+
+\section*{Teaching}
+
+\begin{itemize}
+\item ``Introduction to Quantitative Methods'' (TA, \emph{Graduate}, \texttt{fall}: 2015).
+\item ``American Government'' (TA, \emph{Undergraduate}, \texttt{fall}: 2014 to \texttt{fall}: 2016).
+\item ``Math Camp for Political Scientists'' (Instructor, \emph{Graduate}, \texttt{winter}: 2015).
+\end{itemize}
+
+
+\section*{Service}
+
+\begin{itemize}
+\item Comparative/International Political Economy Job Search (2015).
+\item Discussant ``Emerging Trends Topics'' talks (2014, 2015).
+\item Graduate Student mentor (2014, 2015, 2016).
+\end{itemize}
+
+
+\section*{Misc}
+
+\subsection*{Languages}
+English, Spanish (native).
+
+
+\subsection*{Software}
+\texttt{R}, \texttt{Stata}, \LaTeX.
+
+\subsection*{Methods Training}
+Time Series I (ICPSR), Introduction to Bayesian Analysis (ICPSR), Time Series II (ICPSR), Advanced MLE - Panel Data (ICPSR), Experimental Political Science (RU), Advanced Research in Political Economy (RU), Formal Modeling I (Princeton), Advanced Econometrics (RU, Economics), Introduction to Game Theory (ICPSR), Regression III: Advanced Methods (ICPSR), Measurement, Scaling and Dimensional Analysis (ICPSR), Causal Inference for the Social Sciences (ICPSR), Regression Analysis (RU, Statistics), Maximum Likelihood Estimation for GLMs (RU).
+
+
+
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
