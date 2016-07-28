@@ -3,8 +3,6 @@
 
 *.png
 
-*.pdf
-
 *.webloc
 
 Resources/pandoc_convertor
