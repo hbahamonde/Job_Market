@@ -12,6 +12,12 @@
 \usepackage[bottom]{footmisc} % footnotes at the bottom.
 \usepackage{color} % for colors
 
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
 % Margins
 \topmargin=-1in % Moves the top of the document 1 inch above the default
 \textheight=9in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
@@ -39,8 +45,13 @@
 Rutgers University\\
 \vspace{20pt} \hrule height 1pt % If you would like a horizontal line separating the name from the address, uncomment the line to the left of this text
 89 George St. \\ New Brunswick, NJ 08901 \\ (732) 318-9650 \\ 
-\href{mailto:hector.bahamonde@rutgers.edu}{Hector.Bahamonde@Rutgers.edu} \\
-\href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+{\normalfont\normalsize\href{mailto:hector.bahamonde@rutgers.edu}{Hector.Bahamonde@Rutgers.edu}} \\
+{\normalfont\normalsize\href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}}\\
+{\normalfont \scriptsize{
+% Date
+\vspace{5mm}\today\\
+Download last version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Teaching_Statement.pdf}{\texttt{here}}}} % Link to last version
+
 
 {\huge\vspace{8mm} Teaching Statement}
 \end{center} 
