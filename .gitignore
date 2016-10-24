@@ -33,3 +33,13 @@ Resources/Interviews.mdown
 
 
 .DS_Store
+
+*.nav
+
+*.snm
+
+*.toc
+
+Bahamonde_Job_Talk.pdf
+
+Bahamonde_Job_Talk.tex
