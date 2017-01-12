@@ -1,0 +1,107 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{\vspace{-3cm}Hector Bahamonde} % Name
+
+\addrfrom{
+\today\\ % Date
+[12pt]
+{\bf Hector Bahamonde}\\
+Department of Political Science\\
+Rutgers University\\
+89 George St. \\ % Address
+New Brunswick, NJ 08901
+}
+
+\phonefrom{(732) 318-9650} % Phone number
+
+\emailfrom{\href{mailto:hector.bahamonde@rutgers.edu}{Hector.Bahamonde@Rutgers.edu} \\ 
+\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+Download last version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter_LAC.pdf}{\texttt{{\color{red}here}}}} % Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
+\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/RU/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+% introduction
+\vspace{-0.3cm}I am writing to apply for the position available in your institution. I am a doctoral candidate in the Department of Political Science at Rutgers University, where I will earn my Ph.D. in May 2017. My dissertation advisors are Robert Kaufman (political science professor, chair), Daniel Kelemen (political science professor and Jean Monnet chair in European union politics), Douglas Blair (political science and economics, professor), and Paul Poast (political science, University of Chicago).
+
+
+
+% instructor: general
+As an {\bf instructor}, I am interested in courses that are carefully designed to answer big questions in comparative politics. While my research mostly focuses on Latin America, my teaching interests are very broad. As a political economist, I mostly focus on economic development, economic history, institutional development and democratic development/underdevelopment. However, I am also interested in political participation, competitive authoritarianisms, welfare politics, party politics and other relevant topics. In order to study these areas, it seems natural to me to incorporate other relevant cases beyond Latin America. Similarly, though I adopt a structuralist epistemology, I have been broadly trained so other approaches could be considered as well. 
+
+% instructor: specifics
+I would feel very comfortable teaching a wide range of {\bf courses} in comparative politics. I have designed a very interesting syllabus to teach the \emph{Introduction to Comparative Politics} course. Comparative politics is both a substantive area and a scientific method. I take care of this distinction. Just to mention one example, when we discuss regime types I take the opportunity to teach the current debate on concept formation. I feel very passionate about concepts: \emph{What makes a democracy, a democracy? Is it elections? Both Cuba and China hold elections, however they are not fair. However, how can we measure `fair' elections?} Other topics such as democratic transitions/reversals and political culture are included as well. You can download the latest version of the syllabus \href{https://github.com/hbahamonde/Comparative_Politics_UGRAD/raw/master/Bahamonde_Comparative_Politics_Syllabus_UGRAD.pdf}{\texttt{here}}. I feel very passionate about political development too, and in general, I feel very intrigued about the question of why some countries succeed while others fail, in both economic and political terms. I have designed a very careful \emph{Introduction to Political Economy} syllabus where we examine in detail such a wide range of interesting topics. For example, we start by discussing the origins of democracy and the state, and later on in the semester I cover some topics on inequality and development. You can take a look at the latest version of my syllabus \href{https://github.com/hbahamonde/Political-Economy-Intro-UGrad/raw/master/Pol_Econ_Dev_Syllabus_UGRAD.pdf}{\texttt{here}}. Finally, in my course entitled \emph{Introduction to Latin American Politics} we discuss major political and economic challenges this very interesting region has faced. The latest syllabus is available \href{https://github.com/hbahamonde/Latin_American_Politics_UGRAD/raw/master/Bahamonde_Latin_American_Politics_Syllabus_UGRAD.pdf}{\texttt{here}}. I cannot finish this section without mentioning that I have a strong interest in political methodology and epistemology. My minor certification is in methodology. I would be very glad to teach both introductory and advanced courses on quantitative methodology.
+
+
+% intro: my research in general
+My {\bf research} explores the economic origins of state capacities as well as the political economy of institutional development and the role of inequality on democratic development. My methods include historical analyses, quantitative methods and experimental designs. Though my research focuses predominantly on Latin America, any of my current and future research projects can be expanded to other developing countries. 
+
+
+% job market paper and working papers. 
+My {\bf job market paper} argues that the modernization of the fiscal apparatus was product of an inter-sectoral conflict between the agricultural and industrial elites. This project argues that the structural transformation, i.e. a secular decline of agriculture and substantial expansion of manufacturing, imposed tight constraints on the way politics was run by the incumbent landowning class. I utilize fine-grained historical case study comparisons, sectoral outputs from 1900 to the present, time-series econometric techniques, hazard models, and a novel earthquake dataset that covers sub-national death tolls from 1900 to the present to measure state capacities. The paper is available \href{https://github.com/hbahamonde/IncomeTaxAdoption/raw/master/Bahamonde_IncomeTaxAdoption.pdf}{here}. In addition, I am currently expanding on the findings of a series of {\bf working papers} related to vote-buying and vote-selling, using both observational and experimental data in the Americas. One of these papers discusses why parties target in a clientelistic way groups or individuals. You can download the latest version of the paper I have just submitted for publication \href{https://github.com/hbahamonde/Clientelism_paper/raw/master/Bahamonde_Clientelism_Paper.pdf}{here}. 
+
+
+{\bf Collaborative research} with undergraduate students is one of my top priorities. As an undergraduate I would work very close with faculty members doing research. In my experience, I learned so much outside of the classroom by doing research that it would \emph{not} be natural for me to not replicate my experience with others. I could safely say that it was then, under the direction of excellent mentors, that I decided to pursue a career in academia. I am very happy to continue with that tradition.
+
+
+More information, \href{http://www.hectorbahamonde.com/teaching/
+}{syllabi}, my \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Research_Statement.pdf}{research}, \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Teaching_Statement.pdf}{teaching} and \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Diversity_Statement.pdf}{diversity} statements, as well as other \href{http://www.hectorbahamonde.com/research/}{papers} are available on my website: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}. Thank you for considering my application. I look forward to hearing from you.
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
