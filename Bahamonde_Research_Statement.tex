@@ -2,25 +2,24 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt]{letter} % Default font size of the document, change to 10pt to fit more text
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
 
-%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font 
-%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
 
-% packages
-\usepackage{hyperref} % for links
-\usepackage[bottom]{footmisc} % footnotes at the bottom.
-\usepackage{color} % for colors
+\usepackage{standalone}
 
-% Margins
-\topmargin=-1in % Moves the top of the document 1 inch above the default
-\textheight=9in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
-\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
-\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.jpg}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
 
-%\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
-\date{}
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
 
+\lthUiuc % Print the company/institution logo
 
 \usepackage{color} % for colors
 \usepackage{hyperref} % for links
@@ -31,44 +30,54 @@
   pdfpagemode = UseNone
 }
 
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
 
+%\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf Hector Bahamonde, PhD}\\
+\color[HTML]{003300}{{\bf Postdoctoral Fellow}}\\
+\emph{\color[HTML]{003300}{Center For Inter-American Policy \& Research}}\\
+\color[HTML]{003300}{Tulane University}\\
+205 Richardson, New Orleans, LA 70118
+}
+
+\phonefrom{(732) 318-9650} % Phone number
+
+\emailfrom{\href{mailto:bahamondeh@gmail.com}{BahamondeH@gmail.com} \\ 
+\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+\today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+%\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
+%\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/RU/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
+\begin{newlfm}
 
 %----------------------------------------------------------------------------------------
-%	ADDRESSEE SECTION
+%	LETTER CONTENT
 %----------------------------------------------------------------------------------------
 
-\begin{letter}{} 
 
-%----------------------------------------------------------------------------------------
-%	YOUR NAME & ADDRESS SECTION
-%----------------------------------------------------------------------------------------
 
-\begin{center}
-\large\bf Hector Bahamonde \\ % Your name
-Rutgers University\\
-\vspace{20pt} \hrule height 1pt % If you would like a horizontal line separating the name from the address, uncomment the line to the left of this text
-89 George St. \\ New Brunswick, NJ 08901 \\ (732) 318-9650 \\ 
-{\normalfont\normalsize\href{mailto:hector.bahamonde@rutgers.edu}{Hector.Bahamonde@Rutgers.edu}} \\
-{\normalfont\normalsize\href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}}\\
-{\normalfont \scriptsize{
-% Date
-\vspace{4mm}\today\\
-Download last version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Research_Statement.pdf}{\texttt{\color{red}here}}}} % Link to last version
-\\
-{\huge\vspace{3mm} Research Statement}
-\end{center} 
+\vspace{-2cm}{\bf \huge Research Statement}\\
 
-%\signature{\vspace{6cm}h.b., 2017} % Your name for the signature at the bottom
-
-%----------------------------------------------------------------------------------------
-%	LETTER CONTENT SECTION
-%----------------------------------------------------------------------------------------
-\opening{} 
- 
-% intro // job market paper
-\vspace{-1.5cm}Within comparative politics, my research explores the intersection between inequality and political development, from a political economy perspective. My {\bf job market paper} (\emph{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/IncomeTaxAdoption/status.txt}\unskip}) entitled ``\href{https://github.com/hbahamonde/IncomeTaxAdoption/raw/master/Bahamonde_IncomeTaxAdoption.pdf}{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/IncomeTaxAdoption/title.txt}\unskip}'' starts from the observation that an elite divided on an economic cleavage is at the same time divided on their political preferences, particularly regarding their attitude towards state centralization. Consequently, an elite split along economic interests will use state power to influence in different ways certain policies and hence, growth and state building. The paper argues that the modernization of the fiscal apparatus was product of an inter-sectoral conflict between the agricultural and industrial elites. 
+%\vspace{-1cm}
+Within comparative politics, my research explores the intersection between inequality and political development, from a political economy perspective. My {\bf job market paper} (\emph{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/IncomeTaxAdoption/status.txt}\unskip}) entitled ``\href{https://github.com/hbahamonde/IncomeTaxAdoption/raw/master/Bahamonde_IncomeTaxAdoption.pdf}{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/IncomeTaxAdoption/title.txt}\unskip}'' starts from the observation that an elite divided on an economic cleavage is at the same time divided on their political preferences, particularly regarding their attitude towards state centralization. Consequently, an elite split along economic interests will use state power to influence in different ways certain policies and hence, growth and state building. The paper argues that the modernization of the fiscal apparatus was product of an inter-sectoral conflict between the agricultural and industrial elites. 
 
 % main argument of the book
 The job market paper is embedded into a larger {\bf book manuscript} entitled \emph{``Structural Transformations in Latin America: State Building and Elite Competition 1850-2010''} where I analyze how a major change in the economy acted as a critical juncture setting countries in either a path of development or an underdevelopment trap. The {\bf main argument of the book} is that the economic structural transformation in Latin America, i.e. the secular decline of agriculture and substantial expansion of manufacturing, imposed tight constraints on the way politics was run by the incumbent landowning class. Agriculturalists had been a hegemonic group protected by institutions that originated in colonial times. These norms had survived due to institutional inertia, perpetuating their advantaged position. In a separate \href{https://github.com/hbahamonde/Negative_Link_Paper/raw/master/Bahamonde_NegativeLink.pdf}{\texttt{paper}} (\emph{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/NegativeLink/status.txt}\unskip}), I explain that the structural transformation required \underline{both} sectors to grow in a \emph{balanced} fashion, \emph{leveling both elites in their relative political, economic and military capacities}. A productive agricultural sector was able to supply labor and cheap foodstuff which the modern sector demanded, promoting balanced economic development between the two sectors, \emph{politically empowering both economic elites}. While industrial expansion relies mainly on capital, agricultural development mainly relies on land (a fixed asset). Hence, eventually the former surpassed the latter, changing the structure of the economy and the political landscape. The emergence of an efficient and productive industrial sector altered not only the structure of the economy (causing growth) but also the inter-sectoral balance of political power, making unsustainable the political monopoly run by the landed elites. The book differs deeply from modernization theory. What caused political development was not industrialization per se, but the emergence of a political challenger, the industrial elite. Leveraging sectoral outputs dating back to 1900 until 2010 of a sample of Latin American countries, I use panel data methods (particularly Cox-proportional hazard models), time series analyses (VAR models, impulse response functions and Granger-causality tests) and fine-grained qualitative data to support my argument.
@@ -86,13 +95,8 @@ Another mayor contribution of the book is in measurement. One of the biggest gap
 
 {\bf Summary and Future Research} In sum, my book manuscript, job market paper and working papers on vote-buying and experiments on vote-selling, work toward exploring the effects of inequality on political development from a comparative perspective. I use a widely broad methodological perspective, historical comparisons, time series analyses, and experimental and quasi-experimental methodologies. My goal is to use this toolkit to keep asking ``big'' questions that are fundamental for our discipline. My future research will seek to study the connection between elite competition and democratic regimes, exploring the connection between state building and democratic institutions and its relationship with vertical accountability and the role of the middle class on bureaucracy formation. Particularly, I am interested in whether dictatorships have different dynamics of state-building relative to democracies.\vspace{-10cm}
 
-\closing{{\color{white}empty here}}
-
-
-{\color{white}\encl{}}
 
 %----------------------------------------------------------------------------------------
 
-\end{letter}
-
+\end{newlfm}
 \end{document}
