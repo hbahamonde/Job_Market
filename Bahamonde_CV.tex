@@ -20,6 +20,23 @@
 \usepackage[T1]{fontenc}
 \usepackage[sc,osf]{mathpazo}
 
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/RU/Bibliografia_PoliSci/email.txt}
+% email input end
+
 % Set your name here
 \def\name{Hector Bahamonde}
 
@@ -97,7 +114,7 @@
  \hspace{\fill}\begin{minipage}{0.35\linewidth}
   \begin{tabular}{rr}
    \texttt{cp}: & (732) 318-9650 \\
-    \texttt{e}: & \href{mailto:bahamondeh@gmail.com}{BahamondeH@gmail.com} \\
+    \texttt{e}: & \href{mailto:\filetext}{\filetext} \\
     \texttt{w}: & \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
     \\
     \\

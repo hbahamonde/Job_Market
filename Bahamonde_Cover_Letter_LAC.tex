@@ -20,6 +20,22 @@
 
 \lthUiuc % Print the company/institution logo
 
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/RU/Bibliografia_PoliSci/email.txt}
+% email input end
+
 \usepackage{color} % for colors
 \usepackage{hyperref} % for links
 
@@ -47,7 +63,7 @@
 
 \phonefrom{(732) 318-9650} % Phone number
 
-\emailfrom{\href{mailto:bahamondeh@gmail.com}{BahamondeH@gmail.com} \\ 
+\emailfrom{\href{mailto:\filetext}{\filetext} \\ 
 \texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
 \today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
 
