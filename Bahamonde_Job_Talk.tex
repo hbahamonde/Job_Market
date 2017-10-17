@@ -5,7 +5,10 @@
 %	%	%	%	%	%	%	%	%	%	%	%	%	%	%
 % 						MY PACKAGES 
 %	%	%	%	%	%	%	%	%	%	%	%	%	%	%
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps with pdflatex; use eps in DVI mode	
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps with pdflatex; use eps in DVI mode
+
+\usepackage[export]{adjustbox}
+
 \usepackage{amssymb}
 \usepackage{amsmath}	
 %\usepackage{tipx}
@@ -231,18 +234,20 @@
 
 \begin{itemize}
 	\item Motivate the talk.
-	\item Findings and theory from two dissertation chapters (now papers)\pause:
+	\item Findings and theory from two dissertation chapters (now papers):
 
 	\begin{enumerate}
-		\item \href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}.
-		\\
-		{\bf {\color{red}Status}}: {\input{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/status.txt}\unskip}.\pause
 
-		\vspace{5mm}
 
 		\item \href{http://github.com/hbahamonde/IncomeTaxAdoption/raw/master/Bahamonde_IncomeTaxAdoption.pdf}{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/IncomeTaxAdoption/title.txt}\unskip}.
 		\\
 		{\bf {\color{red}Status}}: {\input{/Users/hectorbahamonde/RU/Dissertation/Papers/IncomeTaxAdoption/status.txt}\unskip}.\pause
+
+\vspace{5mm}
+
+		\item \href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{\input{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}.
+		\\
+		{\bf {\color{red}Status}}: {\input{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/status.txt}\unskip}.\pause
 
 
 	\end{enumerate}
@@ -313,6 +318,37 @@
 
 
 
+\miniframesoff
+\begin{frame}\frametitle{The Importance of Building Codes}
+
+\begin{itemize}
+	\item[] There exists both a {\bf scientific} and a {\bf popular} consensus on that {\bf building codes} \emph{do} reduce death tolls. {\bf Death tolls} are a function of state-capacities, only.
+\end{itemize}
+\vspace{-0.7cm}
+	\begin{columns}
+
+	\column{0.5\textwidth}
+	
+		\begin{figure}[H]
+		\vspace{1mm}\frame{\includegraphics[scale=0.2]{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/Resources/nyt_quake}}
+		\end{figure}
+
+
+		\begin{figure}[H]
+		\vspace{1mm}\frame{\includegraphics[scale=0.2,cfbox=red 2pt]{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/Resources/mexico_nyt}}
+		\end{figure}
+
+	\column{0.5\textwidth}
+		
+		\begin{figure}[H]
+		\vspace{15mm}\hspace{-30mm}\frame{\includegraphics[scale=0.19]{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/Resources/cnn_quake}}
+		\end{figure}
+	
+	\end{columns}
+
+\end{frame}
+
+
 
 \miniframesoff
 \begin{frame}\frametitle{Why do We Care?}
@@ -338,7 +374,7 @@
 \begin{enumerate}
 	\item Higher levels of sectoral/elite competition promoted the implementation of the income tax.
 	\item The income tax fostered higher levels of state capacities overtime.
-	\item Earthquakes serve as good proxies of state capacities. The {\bf capacity} the state has of {\bf enforcing} quake-sensitive {\bf building codes} throughout the territory is a {\bf {\color{red}reflection}} of its {\bf overall} state-capacities.
+	\item Earthquake death-tolls are good proxies to measure of state capacities. The {\bf capacity} of the state to {\bf enforce} quake-sensitive {\bf building codes} throughout the territory, is a {\bf {\color{red}reflection}} of its {\bf overall} state-capacities.
 \end{enumerate}
 
 \end{frame}
@@ -346,7 +382,53 @@
 
 
 
+\subsection{Theoretical Foundations}
 
+
+\miniframesoff
+\begin{frame}[plain, c]
+\begin{center}
+\Large Theoretical Foundations
+\end{center}
+\end{frame}
+
+
+
+\miniframeson
+\begin{frame}\frametitle{Dual Political Economy}
+	
+	\begin{itemize}
+		\item \emph{Dual economy} literature \tiny{(\emph{a.k.a} ``Lewis model'')}. \normalsize\pause\;Industrialists and agriculturalists are in permanent {\bf {\color{red}conflict}} regarding the {\bf {\color{red}transference of labor}} between sectors.\pause\; Being labor a {\bf factor of production}, the ultimate conflict is over {\bf {\color{red}sectoral expansion}}:\pause
+
+		\begin{enumerate}
+			\item More agricultural efficiency, less dependence labor. Industrial expansion absorbs the excess of redundant laborers.\pause 
+			\item Due to the fixity of land, landowners can't expand at the same pace industrialists can (mainly depend on capital).\pause
+		\end{enumerate}
+
+		\item Hence, agricultural expansion is a self-undermining process \tiny{(relative to industrial expansion),}\normalsize\; and ``cultivates the seeds of its own demise.''
+
+		\item I {\bf {\color{red}extrapolate} this conflict to their respective {\color{red}sectoral preferences towards income taxation}}---and consequently---{\bf state centralization}.
+	\end{itemize}
+
+\end{frame}
+
+
+
+\miniframesoff
+\begin{frame}\frametitle{Dual Political Economy}
+	
+	\begin{itemize}
+		\item Since taxation {\color{red}affects} landowners and industrialists in {\color{red}different} ways, both sectors have different preferences towards state centralization.\pause
+
+		\begin{enumerate}
+			\item[{\color{red}[Agr]}] Since {\color{red}land fixity} increases the risk premium of the landed elite's main asset, they systematically {\color{red}resist} taxation.\pause
+			\item[{\color{black!30!green}[Ind]}] As capital can be {\color{black!30!green}reinvested in nontaxable sectors}, industrialists' preferences toward taxation are more {\color{black!30!green}elastic}.\pause
+		\end{enumerate}
+
+		\item I find in the next section that industrialists preferred to impose an income tax on themselves.\pause\; Given their higher dependence on imports (capital), imposing an import tax would have made them worse off.
+	\end{itemize}
+
+\end{frame}
 
 
 
@@ -385,9 +467,9 @@
 \begin{frame}\frametitle{Income Taxation and State Capacities}
 
 	\begin{itemize}
-		\item[] {\bf Fiscal sociology} theory. Income taxation offers a theory of state formation.
+		\item[] {\bf Fiscal sociology} theory. Income taxation offers a theory of state formation.\pause
 
-		\item[] Monitoring private incomes, and converting them into {\color{red}public property}, \emph{fostered} state formation.
+		\item[] Monitoring private incomes, and converting them into {\color{red}public property}, \emph{fostered} state formation.\pause
 
 			\begin{enumerate}
 				\item \emph{Indirect} taxes are easier to collect: ex., collect them at ports.
@@ -537,6 +619,8 @@
 
 
 
+
+
 \miniframesoff
 
 \begin{frame}\frametitle{Argument}
@@ -585,7 +669,7 @@
 \begin{frame}\frametitle{Argument}
 	\begin{itemize}
 		
-		\item[] Also, industrial expansion required more infrastructure (public goods), such as roads and bridges. Hence industrial elites were more willing to pay for those via an income tax.
+		\item[] Also, industrial expansion required more infrastructure (public goods), such as roads and bridges. Hence industrial elites were more willing to pay for those via an income tax\tiny{---as opposed to import taxes.}
 
 		\begin{figure}[H]
 		\vspace{0.6cm}\hspace{-8mm}\includegraphics[scale=0.6]{/Users/hectorbahamonde/RU/Job_Market/causal_path_p1_strong}
@@ -625,7 +709,7 @@
 \begin{frame}\frametitle{Argument}
 	\begin{itemize}
 		
-		\item[] State presence became more dense and complex, fostering state-making. Income {\bf taxation} was the {\color{red}{\bf engine} that promoted {\bf state reach}} and {\bf state-building}.
+		\item[] State presence became more dense and complex, fostering state-making. Income {\bf taxation} was the main {\color{red}{\bf engine}} that promoted {\bf state-building}.
 
 
 		\begin{figure}[H]
@@ -655,7 +739,7 @@
 
 \begin{frame}\frametitle{When do countries implement the tax?}
 	
-	\begin{exampleblock}{The `when' is substantively important}
+	\begin{exampleblock}{`When' is a substantively important quantity of interest}
 	An {\bf earlier} implementation situated the {\bf process} of implementing the law during the {\bf country's formative period}.
 	\end{exampleblock}
 
@@ -672,13 +756,13 @@
 \begin{frame}\frametitle{When do countries implement the tax?}
 	
 	\begin{alertblock}{Late implementers?}
-	Late implementation situated the {\bf {\color{red}process}} of implementation {\bf after} the country's formative period.
+	Process was situated {\bf after} the country's formative period.
 	\end{alertblock}
 
 	\begin{itemize}
-		\item While these countries eventually {\bf did impose the tax}, it was not product of an {\color{red}{\bf early}} domestic/endogenous agreement.
+		\item While these countries eventually {\bf did impose the tax}, it was not product of an {\color{red}{\bf early domestic/endogenous}} process.
 
-		\item {\bf No sectoral threat, no need for agreements}.
+		\item {\bf No sectoral threat, no need for agreements}.\pause
 
 		\item {\bf Guatemala}: it was exogenously imposed by the US-backed dictator Colonel Peralta, not necessarily reflecting the inter-sectoral domestic dynamics.
 
@@ -1099,9 +1183,9 @@ Num. clust.                      &              &               & 9           & 
 \miniframesoff
 \begin{frame}[c]\frametitle{Research Question}
 \begin{center}
-\huge{How can we {\bf measure the effects} of fiscal expansion on state capacities overtime?}\pause
+\huge{What have been the {\bf effects} of fiscal expansion on state capacities overtime, and how can they be {\bf measured}?}\pause
 \\
-\vspace{2cm}
+\vspace{1.3cm}
 \large{Use a novel hand-collected longitudinal {\bf dataset on earthquakes death tolls} to proxy the \emph{capacity} of the state to enforce building codes at the subnational level.}\pause\;{\bf State capacities increase overtime upon the implementation of the income tax}.
 \end{center}
 \end{frame}
@@ -1116,13 +1200,13 @@ Num. clust.                      &              &               & 9           & 
 \miniframeson
 
 
-% HERE
+
 
 \begin{frame}
 	\begin{itemize}
 		\item[] The first section helps us to understand \emph{when} countries implement the income tax, and \emph{why} `when' is relevant.\pause\; However, it doesn't link income taxation with \emph{actual} state capacities.\pause%\; Historians and fiscal sociologists provide some answers, but this relationship in the Latin American political economies has been overlooked.\pause\; \emph{{\bf Did the expansion of the fiscal system improve state capacities overtime in Latin America?}}\pause
 
-		\item[\tiny{Mechanism}] \emph{How} did income taxation {\bf expanded} \emph{overall} state capacities? 
+		\item[\tiny{Mechanism}] Beyond `\emph{War makes states and states make war}.'  
 
 		\item[\tiny{Measurement}] \emph{How} can we {\bf measure} the effects of income taxation on state of capacities overtime?
 
@@ -1201,6 +1285,22 @@ Num. clust.                      &              &               & 9           & 
 	\begin{itemize}
 		
 		\item[] {\color{red}Argue} that higher levels of subnational and national sectoral contestation fostered state-capacities overtime.
+
+
+		\begin{figure}[H]
+		\vspace{5mm}\hspace{-8mm}\includegraphics[scale=0.7]{/Users/hectorbahamonde/RU/Dissertation/Papers/Earthquake_Paper/causal_path}
+		\end{figure}
+
+	\end{itemize}
+\end{frame}
+
+
+
+\miniframesoff
+\begin{frame}\frametitle{Argument}
+	\begin{itemize}
+		
+		\item[] \underline{{\bf Conceptualizing contestation}}: {\bf regional industrial expansion} contesting {\bf agricultural national} economic hegemony.
 
 
 		\begin{figure}[H]
