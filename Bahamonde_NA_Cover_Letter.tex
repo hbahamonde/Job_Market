@@ -1,0 +1,100 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+\usepackage{standalone}
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.jpg}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/RU/Bibliografia_PoliSci/email.txt}
+% email input end
+
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf Hector Bahamonde, PhD}\\
+\color[HTML]{003300}{{\bf Postdoctoral Fellow}}\\
+\emph{\color[HTML]{003300}{Center For Inter-American Policy \& Research}}\\
+\color[HTML]{003300}{Tulane University}\\
+205 Richardson, New Orleans, LA 70118
+}
+
+\phonefrom{(732) 318-9650} % Phone number
+
+\emailfrom{\href{mailto:\filetext}{\filetext} \\ 
+\today, \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_NA_Cover_Letter.pdf}{\texttt{{\color{red}download latest version here}}}}% Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
+\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/RU/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+% begining
+
+
+% ending
+{\input{/Users/hectorbahamonde/RU/Job_Market/ending.tex}\unskip}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
