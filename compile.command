@@ -10,6 +10,8 @@ latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_Cover_Letter_PD.
 
 latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_CV.tex
 
+latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_NA_CV.tex
+
 latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_Diversity_Statement.tex
 
 latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_Research_Statement.tex
