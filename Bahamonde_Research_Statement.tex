@@ -9,8 +9,19 @@
 
 \usepackage{standalone}
 
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
+
 \newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
-\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.jpg}}} % Company/institution logo at the top left of the page
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
 \makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
 
 \newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
@@ -56,13 +67,13 @@
 {\vspace{-2cm}}\\ % Date
 [12pt]
 {\bf Hector Bahamonde, PhD}\\
-\color[HTML]{003300}{{\bf Postdoctoral Fellow}}\\
-\emph{\color[HTML]{003300}{Center For Inter-American Policy \& Research}}\\
-\color[HTML]{003300}{Tulane University}\\
-205 Richardson, New Orleans, LA 70118
+{\color{blue}{\bf Assistant Professor}}\\
+\emph{{\color{blue}Social Sciences Institute}}\\
+{\color{blue}O$'$Higgins University}\\
+Rancagua, Chile
 }
 
-\phonefrom{(732) 318-9650} % Phone number
+\phonefrom{+1(504) 941-9131} % Phone number
 
 \emailfrom{\href{mailto:\filetext}{\filetext} \\ 
 \texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
@@ -110,10 +121,18 @@ In addition to the book manuscript, I am currently expanding the findings of a {
 
 
 % Vote-Buying in Brazil// explaining the paper
-{\bf Vote-buying.} Going forward, I have a {\bf working \href{https://github.com/hbahamonde/Clientelism_paper/raw/master/Bahamonde_Clientelism_Paper.pdf}{paper}} (\emph{\input{/Users/hectorbahamonde/RU/research/Clientelism_paper/status.txt}\unskip}) on vote-buying in Brazil. The paper starts by recognizing that there is not a consensus on whether parties target groups or individuals. In fact, most scholars assume that group-targeting and individual-targeting are interchangeable. The paper argues that parties make use of simultaneous segmented targeting techniques. Groups are preferred by brokers when party machines need to secure higher levels of electoral support, relying on the economies of scale and spillover effects that these groups provide. However, individuals are better targets when they are more \emph{identifiable}, that is when poor individuals are nested in non-poor contexts or vice-versa. The theory also explains why non-poor individuals are targeted. The paper uses observational data and matching methods and a short case study (Brazil) to confirm the assumptions made in the models.
+{\bf Vote-buying.} Going forward, I have a {\bf published \href{https://github.com/hbahamonde/Clientelism_paper/raw/master/Bahamonde_Clientelism_Paper.pdf}{paper}} (\emph{\input{/Users/hectorbahamonde/RU/research/Clientelism_paper/status.txt}\unskip}) on vote-buying in Brazil. \input{/Users/hectorbahamonde/RU/research/Clientelism_paper/abstract.txt}\unskip
+
+
+%The paper starts by recognizing that there is not a consensus on whether parties target groups or individuals. In fact, most scholars assume that group-targeting and individual-targeting are interchangeable. The paper argues that parties make use of simultaneous segmented targeting techniques. Groups are preferred by brokers when party machines need to secure higher levels of electoral support, relying on the economies of scale and spillover effects that these groups provide. However, individuals are better targets when they are more \emph{identifiable}, that is when poor individuals are nested in non-poor contexts or vice-versa. The theory also explains why non-poor individuals are targeted. The paper uses observational data and matching methods and a short case study (Brazil) to confirm the assumptions made in the models.
 
 % vote-selling // experiments
-{\bf Vote-Selling.} With the support of a generous grant, I designed two {\bf experiments} in the U.S. out of a series of experiments to be fielded in Latin America for further comparison. I look at the tipping points where U.S. citizens prefer a monetary incentive rather than keeping their right to choose whom to vote for. My identification strategy takes advantage of a \emph{list experiment} to capture non-biased answers on socially-condemnable/illegal behaviors (like vote-buying). In a separate study, I designed a \emph{conjoint experiment} to identify which of Dahl's democratic dimensions established in his \emph{Polyarchy} should fail to predict individual propensities of vote-selling. Conjoint experiments allow researchers to directly isolate complex multi-dimensional concepts (such as \emph{support for democracy}), and observe which dimension(s) is/are associated to the outcome of interest (vote-selling). Preliminary results show that when the \emph{liberal} component, particularly the \emph{right to associate} fails, individuals are more likely to sell. In this sense, this project is innovative, as it departs from the common strategy of correlating the standard support for democracy question with vote-buying. My identification strategy is comprehensive than regular approaches as it \emph{decomposes} ``support for democracy'' into several dimensions which are theoretically and substantively relevant (i.e., Dahl's democracy dimensions). 
+{\bf Vote-Selling.} With the support of a generous grant, I designed two experiments in the U.S. out of a series of experiments to be fielded in Latin America for further comparison. In the \href{https://github.com/hbahamonde/Vote_Selling/raw/master/Bahamonde_VoteSellingUS.pdf}{\texttt{paper}} (\emph{\input{/Users/hectorbahamonde/RU/research/Vote_Selling/status.txt}\unskip}), I looked at the tipping points at which a sample of U.S. citizens (N = 1,479) prefer a monetary incentive rather than keeping their right to choose whom to vote for. \input{/Users/hectorbahamonde/RU/research/Vote_Selling/abstract.txt}\unskip
+
+Within the same project, I am currently designing an {\bf economic experiment} in the lab. \input{/Users/hectorbahamonde/RU/research/Economic_Experiment_Vote_Selling/abstract.txt}\unskip
+
+
+%I look at the tipping points where U.S. citizens prefer a monetary incentive rather than keeping their right to choose whom to vote for. My identification strategy takes advantage of a \emph{list experiment} to capture non-biased answers on socially-condemnable/illegal behaviors (like vote-buying). In a separate study, I designed a \emph{conjoint experiment} to identify which of Dahl's democratic dimensions established in his \emph{Polyarchy} should fail to predict individual propensities of vote-selling. Conjoint experiments allow researchers to directly isolate complex multi-dimensional concepts (such as \emph{support for democracy}), and observe which dimension(s) is/are associated to the outcome of interest (vote-selling). Preliminary results show that when the \emph{liberal} component, particularly the \emph{right to associate} fails, individuals are more likely to sell. In this sense, this project is innovative, as it departs from the common strategy of correlating the standard support for democracy question with vote-buying. My identification strategy is comprehensive than regular approaches as it \emph{decomposes} ``support for democracy'' into several dimensions which are theoretically and substantively relevant (i.e., Dahl's democracy dimensions). 
 
 
 {\bf Summary and Future Research} In summation, my book manuscript, job market paper and working papers on vote-buying and experiments on vote-selling work toward exploring the effects of inequality on political development from a comparative perspective. I use a widely broad methodological perspective, historical comparisons, time series analyses, and experimental and quasi-experimental methodologies. My goal is to use this toolkit to keep asking ``big'' questions that are fundamental to our discipline. My future research will seek to study the connection between elite competition and democratic regimes, exploring the connection between state building and democratic institutions (and its relationship with vertical accountability), and the role of the middle class on bureaucratic development. Particularly, I am interested in whether dictatorships have different dynamics of state-building relative to democracies. Please check my \href{http://www.hectorbahamonde.com/teaching/}{\texttt{teaching portfolio}} and see how my {\bf research and teaching interests match}.
