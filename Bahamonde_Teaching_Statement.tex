@@ -7,10 +7,29 @@
 %\usepackage{charter} % Use the Charter font for the document text
 \usepackage{graphics}
 
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
 \usepackage{standalone}
 
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
 \newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
-\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.jpg}}} % Company/institution logo at the top left of the page
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
 \makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
 
 \newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
@@ -37,14 +56,7 @@
 \readfile{/Users/hectorbahamonde/RU/Bibliografia_PoliSci/email.txt}
 % email input end
 
-\usepackage{color} % for colors
-\usepackage{hyperref} % for links
 
-\hypersetup{
-  colorlinks = true,
-  urlcolor = blue,
-  pdfpagemode = UseNone
-}
 
 %----------------------------------------------------------------------------------------
 %	YOUR NAME AND CONTACT INFORMATION
@@ -56,13 +68,13 @@
 {\vspace{-2cm}}\\ % Date
 [12pt]
 {\bf Hector Bahamonde, PhD}\\
-\color[HTML]{003300}{{\bf Postdoctoral Fellow}}\\
-\emph{\color[HTML]{003300}{Center For Inter-American Policy \& Research}}\\
-\color[HTML]{003300}{Tulane University}\\
-205 Richardson, New Orleans, LA 70118
+{\color{blue}{\bf Assistant Professor}}\\
+\emph{{\color{blue}Social Sciences Institute}}\\
+{\color{blue}O$'$Higgins University}\\
+Rancagua, Chile
 }
 
-\phonefrom{(732) 318-9650} % Phone number
+\phonefrom{+1(504) 941-9131} % Phone number
 
 \emailfrom{\href{mailto:\filetext}{\filetext} \\ 
 \texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
@@ -108,7 +120,7 @@
 \item Methods courses:
 	\begin{itemize}
 	\item Applied Quantitative Methods in Political Science (UG/G).
-	\item Research Design / Epistemology in Political Science (UG/G).
+	\item Research Design / Epistemology in Political Science (UG \href{https://github.com/hbahamonde/Social_Sciences_Epistemology_UGRAD/raw/master/Bahamonde_Social_Sciences_Epistemology_UGRAD_Syllabus.pdf}{syllabus} / G).
 	\item Introduction to Quantitative Methods in Political Science (UG/G).
 	\item Maximum Likelihood Estimation for Generalized Linear Models (G).
 	\item Experimental Methodology (UG/G).
