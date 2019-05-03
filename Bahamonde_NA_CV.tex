@@ -1,0 +1,189 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/RU/Bibliografia_PoliSci/email.txt}
+% email input end
+
+% Set your name here
+\def\name{Hector Bahamonde, PhD}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+% \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {political science, economic development, methods},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{{\tiny \name}}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+ Instituto de Ciencias Sociales \\
+ Universidad de O$'$Higgins \\
+ Chile\\
+  \\
+  \\
+\begin{footnotesize}
+CV last updated: \today. \\
+\href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_NA_CV.pdf}{\texttt{{\color{red} Download latest CV here}}}.%\\
+%\href{http://www.hectorbahamonde.com/jobmarket/}{\texttt{{\color{red} Download latest application materials here}}}.
+\end{footnotesize}
+
+\end{minipage}
+ \hspace{\fill}\begin{minipage}{0.35\linewidth}
+  \begin{tabular}{rr}
+   \texttt{cp (CL)}: & +56-9-4-597-4203 \\
+   \texttt{cp (US)}: & +1(504) 941-9131 \\
+    \texttt{e}: & \href{mailto:\filetext}{\filetext} \\
+    \texttt{w}: & \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+    \\
+    \\
+    \\
+  \end{tabular}
+\end{minipage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bio
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Bio}
+
+Dr. Hector Bahamonde, an Assistant Professor of Political Science, has a successful academic career in Chile. He earned his PhD in the United States, where he also received a post-doctoral fellow too. Now, being 34 years old, he's trying to relocate to Germany, get a non-academic job, and make use of his methodological training outside academia. Married to a German woman, both want to improve their work/life balance, and spend more time with Tobias (2 years-old) and Olimpia (1 year-old).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_education.tex}\unskip}
+
+\subsection*{Dissertation}
+
+  {\input{/Users/hectorbahamonde/RU/Dissertation/Dissertation/abstract.txt}\unskip}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Academic Employment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Employment}
+
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_academic_employment.tex}\unskip}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Expertise/Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Skills}
+
+\subsection*{Data-Oriented and Computational Social Scientist}
+Trained as an academic, I have deep understanding and experience in applied social research. In particular, I'm passionate about working with big datasets, causal inference (lab experiments), quasi-experiments (matching for observational studies) and programming (\texttt{R} and \texttt{Stata}). You can check my coding expertise in my \href{https://github.com/hbahamonde}{GitHub}.
+
+\subsection*{Interpersonal}
+I have considerable experience as an independent critical person, used to work under pressure, and goal-oriented. Not only I have good writing/analytical skills, but also excellent interpersonal relationships. Having both excellent leadership skills, and willingness to collaborate with others, make me an ideal candidate to take different roles, for instance in different projects, in the same institution. Finally, I have vast experience conducting data/statistical analyses, IRB applications (for my own experiments), and grant writing.
+
+
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_misc.tex}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Working Papers -- Published Papers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Research}
+
+{\bf Please note, every paper employs different sophisticated---still \emph{applied}---econometric techniques.}
+
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_research.tex}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Career Objective
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Career Objective}
+
+I want to help institutions (big or small) to reach their goals by incorporating my academic experience. By bringing my analytical skills, and excellent interpersonal relationships, I am interested in both leading teams and collaborating with others. My ideal institution lets its employees be innovative, goal-oriented and creative. {\bf I have immediate availability, and I'm ready to relocate \emph{tomorrow}.}
+
+\bigskip
+
+
+
+\end{document}

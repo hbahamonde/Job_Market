@@ -8,6 +8,9 @@ latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_Cover_Letter.tex
 # CV
 latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_CV.tex
 
+# NA CV
+latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_NA_CV.tex
+
 # Diversity Statement
 latexmk -pdf -cd /Users/hectorbahamonde/RU/Job_Market/Bahamonde_Diversity_Statement.tex
 
