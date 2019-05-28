@@ -91,7 +91,20 @@
   \end{list}
 }
 
+
+%%%% HERE
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc} 
+
 \begin{document}
+
+
+\begin{tikzpicture}[remember picture,overlay]
+\clip ($(current page text area.north east)!0.0001!(current page text area.south east)!0.05!(current page text area.north west)$)
+  circle (2cm) node {\includegraphics[width=0.2\linewidth]{profile.JPG}};
+\end{tikzpicture}
 
 \centerline{\huge \bf \name}
 
