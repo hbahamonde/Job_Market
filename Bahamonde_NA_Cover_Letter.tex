@@ -1,0 +1,117 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+\usepackage{standalone}
+
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1in}{\vspace{0.35in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/RU/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/RU/Bibliografia_PoliSci/email.txt}
+% email input end
+
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf Hector Bahamonde, PhD}\\
+{\color{blue}{\bf Assistant Professor}}\\
+\emph{{\color{blue}Social Sciences Institute}}\\
+{\color{blue}O$'$Higgins University}\\
+Rancagua, Chile
+}
+
+\phonefrom{+1(504) 941-9131} % Phone number
+
+\emailfrom{\href{mailto:\filetext}{\filetext} \\ 
+\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+\today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{\vspace{-1cm}Dear All,} % Greeting text
+\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/RU/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+% begining
+I am an Assistant Professor of Political Science (political economy) with a successful academic career in Chile. In 2017 I earned my PhD in the United States, in one of the biggest public research universities. Now, being 34 years old, I am trying to relocate to Europe, getting a non-academic job, and make use of my methodological and communication-interpersonal skills in the private industry.
+
+During my academic career, I've taught and performed quantitative research in a number of top universities in the United States. It has been fun, and I am enjoying the challenge: it keeps me, say it, alive. However, my wife (a German woman) and myself want to improve our work/life balance, and spend more time with Tobias (2 years-old) and Olimpia (1 year-old). In academia I've performed almost the same task that that the quantitative industry requires. Hence, I am absolutely positive that the job change will be very smooth to me, and also better rewarded.
+
+The job offered at your company is of the greatest interest to me, and I am certain that I will have a lot to contribute to the table. I have top-notch training in quantitative, experimental and observational data analyses and design, I can't wait to use all these tools to help you improve your company. While my PhD is in Political Science, this discipline in the U.S. is VERY quantitative, almost like Economics. Hence, I am very confident I have the tools you need. 
+
+My preferred work environments are demanding, fast-paced and challenging. All these give me the much-needed adrenaline that makes my job feel more like playing. I like new, complex and hard-to-solve challenges: it feels great when I/we solve them. Personally, I'm very organized, diligent and systematic. There is no other way to solve puzzling issues than being consistent. Plus, I am a very easy-going person, easy to talk to, sociable, and used to international/diverse environments: I just love being around of people different than me; love to talk about their food, music, and customs. It's part of my DNA being very ``plastic.'' %I'm certain that I will pick up with the German language very quickly (I'm a fast learner too).
+
+Finally, I encourage you to consider my application. You can contact me at any time if you feel like asking me questions. I am ready to move to Europe within the next month (any month), and actually feel very excited and confident about what's about to come.
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
