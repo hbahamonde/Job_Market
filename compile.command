@@ -36,3 +36,5 @@ latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Portafolio
 # Teaching Portfolio
 latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Portafolio.tex
 
+# One Pager
+latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_One_Pager.tex
