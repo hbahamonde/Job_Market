@@ -1,0 +1,165 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+\usepackage{standalone}
+
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/Bibliografia_PoliSci/email.txt}
+% email input end
+
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf Hector Bahamonde, PhD}\\
+{\color{blue}{\bf Assistant Professor}}\\
+\emph{{\color{blue}Social Sciences Institute}}\\
+{\color{blue}O$'$Higgins University}\\
+Rancagua, Chile
+}
+
+\phonefrom{+1(504) 941-9131} % Phone number
+
+\emailfrom{\href{mailto:\filetext}{\filetext} \\ 
+\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+\today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+%\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
+%\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+
+
+\vspace{-2cm}{\bf \huge Research Plan}\\
+
+%\vspace{-1cm}
+
+My research plan during my stay at your institution consists of following parts: 
+
+\begin{enumerate}
+  \item Publishing ongoing research I have been working on (more details below).
+  \item Developing new research with faculty members, other post-docs and/or graduate students at your institution.
+  \item Attending the main conferences in the discipline.
+  \item Organizing a workshop/mini-conference per year at your institution.
+  \item Also, I would be very happy: 
+    \begin{itemize}
+      \item Giving service to the Department/Institution.
+      \item Teaching and/or advising graduate and/or undergraduate courses (please refer to my \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Teaching_Statement.pdf}{teaching statement}).
+      \item Assuming administrative tasks when necessary (sitting in committees, organizing talks, etc.).
+    \end{itemize}
+\end{enumerate}
+
+
+{\bf Publishing ongoing research}. Within comparative politics, my research explores the intersection between inequality and political development, from a political economy perspective. I situate my research both in the ``structural'' and ``behavior'' paradigms. 
+
+For the former, I intend to publish a chapter from my dissertation entitled ``\href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}.'' \input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/abstract.txt}\unskip 
+
+For the latter, after publishing \href{https://journals.sub.uni-hamburg.de/giga/jpla/article/view/1121/1128}{\emph{\input{/Users/hectorbahamonde/research/Clientelism_paper/status.txt}\unskip}} on Brazil and  \href{https://link.springer.com/article/10.1057/s41269-020-00174-4}{\emph{\input{/Users/hectorbahamonde/research/Vote_Selling/status.txt}\unskip}} on the United States, I plan on continuing my scholarly work on clientelism and development. 
+
+I have the following pieces of research in the ``pipeline.'' Please note that all these pieces analyze original data using state-of-the-art methodological techniques. All these papers are currently work in progress.
+
+\begin{enumerate}
+
+  % Andrea paper
+  \item ``\href{https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/Vote_Selling_Bahamonde_Canales_Paper.pdf}{{\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/title.txt}\unskip}}.'' {\bf This is an economic experiment on clientelism}. {\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/abstract.txt}\unskip}
+
+  % Cristobal paper
+  \item ``\href{https://github.com/hbahamonde/Conjoint_US/raw/master/Bahamonde_Quininao_Conjoint.pdf}{{\input{/Users/hectorbahamonde/research/Conjoint_US/title.txt}\unskip}}.'' {\bf Using a novel dataset, I designed a conjoint experiment to test which democratic values should ``fail'' in order to produce vote-sellers}. {\input{/Users/hectorbahamonde/research/Conjoint_US/abstract.txt}\unskip}
+
+  % Mart paper
+  \item ``\href{https://github.com/hbahamonde/Inequality_State_Capacities/raw/master/Paper_EJPE_Under_Review.pdf}{{\input{/Users/hectorbahamonde/research/Inequality_State_Capacities/title.txt}\unskip}}.'' {\bf This paper is under review in the European Journal of Political Economy and it looks at the relationship between inequality, democracy and state capacity}. {\input{/Users/hectorbahamonde/research/Inequality_State_Capacities/abstract.txt}\unskip}
+
+  % Igor paper
+  \item ``\href{https://github.com/hbahamonde/Bahamonde_Kovac/raw/master/Bahamonde_Kovac.pdf}{{\input{/Users/hectorbahamonde/research/Bahamonde_Kovac/title.txt}\unskip}}.'' {\bf This paper was just presented at the APSA 2020 conference, and it seeks to identify (using time-series methods) if economic power Granger-causes military power or \emph{vice versa}}. {\input{/Users/hectorbahamonde/research/Bahamonde_Kovac/abstract.txt}\unskip}
+
+\end{enumerate}
+
+
+Given that I have made considerable progress in all these papers, I am sure they will be (well) published while spending time at your Institution.
+
+{\bf Developing new research with faculty members, other post-docs and/or graduate students at your institution}. As you can see, I collaborate with colleagues from different disciplines, scholarly interests, genders, nationalities and degrees of seniority. Following this line, I will be very happy to collaborate with you and other colleagues. I am very sure I will have something interesting to bring to the table, both from a substantive and methodological aspects. {\bf I look forward to working and publishing with you!}
+
+{\bf Reaching out}. Finally, during my time at your Institution, I will take very seriously attending the main conferences in the discipline and organizing a workshop/mini-conference per year at your institution. Every year, since grad school, I attend two to three conferences per year. I have also plenty of experiencing organizing seminars and mini-workshops. 
+
+% ending
+{\input{/Users/hectorbahamonde/Job_Market/ending.tex}\unskip}
+
+
+\vspace{-10cm}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}

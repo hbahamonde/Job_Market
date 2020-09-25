@@ -23,6 +23,9 @@ latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement_
 # Teaching Statement
 latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement.tex
 
+# Research Plan
+latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Research_Plan.tex
+
 
 # PORTFOLIOS at the end
 
