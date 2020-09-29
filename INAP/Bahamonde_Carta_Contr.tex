@@ -1,0 +1,115 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+\usepackage{standalone}
+
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1in}{\vspace{0.35in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+
+\lthUiuc % Print the company/institution logo
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/Bibliografia_PoliSci/email.txt}
+% email input end
+
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{\vspace{-3cm}H\'ector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf H\'ector Bahamonde, PhD}\\
+{\color{blue}{\bf Profesor Asistente}}\\
+\emph{{\color{blue}Instituto de Ciencias Sociales}}\\
+{\color{blue}Universidad de O$'$Higgins}\\
+Rancagua, Chile
+}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{\vspace{-1.9cm}Estimadas/os Integrantes de la Comisi\'on de Concursos Acad\'emicos,} % Greeting text
+\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+Junto con saludarlos/as, me dirijo a ustedes para postular al concurso acad\'emico en temas del \'area de gobierno, gesti\'on y pol\'iticas p\'ublicas del Instituto de Asuntos P\'ublicos de la Universidad de Chile. 
+
+Me motiva much\'isimo poder pertenecer al INAP ya que tiene un cuerpo acad\'emico multidisciplinar vibrante y de tradici\'on, pero tambi\'en porque tiene a los mejores estudiantes de Chile. Aunque mi pregrado y doctorado son en ciencia pol\'itica, considero que mi investigaci\'on es relevante para la administraci\'on p\'ublica en cuanto disciplina. {\bf Mi tema de investigaci\'on principal es la formaci\'on de capacidades administrativas del estado Chileno y Latinoamericano}. En mi tesis doctoral---as\'i como en los \href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{\emph{papers}} que pueden ver en mi CV---me preocupo de estudiar los mecanismos por los cuales los estados en Latinoam\'erica y en Chile construyen (o no) capacidades administrativas de \emph{enforzar} normativas de construcci\'on (casas, puentes, etc.). Un pa\'is aplanado por un terremoto no es otra cosa que una cordial invitaci\'on al estado natural de Hobbes. En tanto pol\'itica p\'ublica, yo explico que aunque todos los estados \emph{quieren} tener las capacidades administrativas para \emph{enforzar} esta pol\'itica p\'ublica (y evitar una cat\'astrofe), no todos \emph{pueden}. Parte de la explicaci\'on que yo elaboro es que los estados que presentan disputas sectoriales dentro de sus econom\'ias logran mobilizar los incentivos necesarios para crear un aparato fiscal fuerte. Levantando el marco te\'orico de la ``sociolog\'ia fiscal'', yo explico c\'omo los impuestos crearon al estado y c\'omo los estados crearon los impuestos. En consecuencia, parte de mi contribuci\'on a la administraci\'on p\'ublica como disciplina consiste en formular condiciones estructurales que ayudaron a los estados Latinoamericanos a desarrollar sus capacidades administrativas durante la primera mitad del siglo XIX. 
+
+De la misma manera, podr\'ia parecer que la otra mitad de mi investigaci\'on (clientelismo) suele ser un tema estudiado s\'olo por y para cientistas pol\'iticos/as. Sin embargo, mi \emph{approach} hacia este fen\'omeno se aleja bastante de c\'omo lo ve un/a cientista pol\'itico/a ``tradicional'' (partidos, ideolog\'ia, elecciones, campa\~nas pol\'iticas, etc.). No digo que este enfoque est\'e mal. Es s\'olo que no es \emph{mi} enfoque. Mi llegada al clientelismo es distinta, y tiene que ver con identificar las fallas administrativas y de pol\'itica p\'ublica que permiten la emergencia de este fen\'omeno. Quisiera nombrar dos ejemplos. En mi \emph{paper} ``\href{https://journals.sub.uni-hamburg.de/giga/jpla/article/view/1121/1128}{Aiming Right at You}'' (WoS) me focalizo en c\'omo la pol\'itica p\'ublica del urbanismo podr\'ia potenciar el clientelismo en Brasil. En particular, el argumento explica c\'omo situaciones de heterogeneidad en niveles de desigualdad econ\'omica aumenta la visibilidad de hogares dispuestos a vender su voto. El segundo ejemplo de c\'omo mi investigaci\'on en clientelismo toca aspectos fundamentales de las capacidades administrativas del estado como \emph{enforcer} de pol\'iticas p\'ublicas est\'a publicado en el \emph{paper} ``\href{https://doi.org/10.1057/s41269-020-00174-4}{Still for Sale}'' (WoS). En este trabajo estudio el caso de c\'omo los habitantes de un estado administrativamente fuerte y cap\'az como Estados Unidos son susceptibles de incurrir en pr\'acticas clientelares. El argumento que desarrollo propone ciertas condiciones individuales bajo las cuales los ciudadanos estar\'ian dispuestos a vender su voto. Tal como lo explico en esta \href{https://eltipografo.cl/2019/07/desigualdad-y-democracia-en-chile}{columna de opini\'on}, las implicancias en t\'erminos de pol\'iticas p\'ublicas son muy grandes, sobre todo en t\'erminos de la pol\'itica del financiamiento de campa\~nas.
+
+Todos estos elementos me ayudaron a asegurar una posici\'on de profesor asistente a tiempo completo en la UOH. Estando en EEUU como \emph{post-doctoral fellow}, fui convocado a ser el primer acad\'emico \emph{full-time} que asumi\'o el rol de Jefe de Carrera de Administraci\'on P\'ublica UOH. Mientras cumpl\'ia este rol (cerca de un a\~no) tuve la oportunidad de construir universidad p\'ublica, abrir nuevas fronteras, asegurar una educaci\'on p\'ublica de calidad a las y los estudiantes de la regi\'on, y de colaborar en la descentralizaci\'on el pa\'is. Y aunque ya no cumplo ese rol debido a razones de reestructuramiento organizacional (ahora las/los jefes de carreras son medias jornadas sin doctorado), mantengo estrecha colaboraci\'on con la actual Jefa de Carrera y sigo ense\~nando a los/las futuras administradoras/es p\'ublicas/as de la Regi\'on de O'Higgins. Ellas/os siguen siendo mi principal \emph{constituency}. Es importante notar que gran parte de mi \emph{teaching} est\'a orientado a administradores/as p\'ublicos/as. Un ejemplo de esto es el curso \href{https://github.com/hbahamonde/Ciencia_Politica_I/raw/master/Bahamonde_Ciencia_Politica_I.pdf}{\emph{Ciencia Pol\'itica II}} donde ense\~no teor\'ias de la formaci\'on del aparato p\'ublico-administrativo. 
+
+Mi manera de aproximarme a la ciencia pol\'itica es a trav\'es del estudio de las instituciones. La m\'as grande que estudio es la instituci\'on del Estado, su formaci\'on, corrupci\'on y su {\bf descentralizaci\'on}. Por ejemplo, en mi \emph{paper} ``\href{https://doi.org/10.1111/rsp3.12337}{Employment Effects of Covid‐19 across Chilean Regions}'' (WoS) estudiamos c\'omo la pandemia del COVID-19 golpe\'o de distintas maneras al pa\'is: usando t\'ecnicas de \emph{forecasting}, encontramos que las regiones mineras tienden a ser m\'as resistentes---en t\'erminos de p\'erdida de empleos---al ser comparadas con regiones agr\'icolas y forestales. La descentralizaci\'on y lo estatal son muy importantes para mi: en este minuto me encuentro desarrollando un \emph{list experiment} para estudiar los niveles sub-nacionales de \emph{tax compliance}. Mi pregunta es, \emph{¿llegar\'a el ``cobrador de impuestos'' a todo el pa\'is?}
+
+
+% Esto es, yo comparto el lenguaje, la \'optica y la relevancia de la administraci\'on p\'ublica.
+Para cerrar, me gustar\'ia volver a expresar mi inter\'es en esta posici\'on. All\'i tendr\'ia la posibilidad de continuar y expandir mi investigaci\'on colaborando con muchos de los/las actuales investigadores/as, como por ejemplo, Letelier, Pliscoff y Figueroa. Tambi\'en me interesa colaborar con \emph{gradstudents}. Como lo se\~nala mi CV, soy un fiel creyente en la colaboraci\'on inter-\'areas. Adem\'as, me sentir\'ia muy c\'omodo ense\~nando cursos de formaci\'on del estado, administraci\'on p\'ublica y fen\'omenos pol\'iticos, an\'alisis emp\'irico de pol\'itica p\'ublica, epistemolog\'ia y metodolog\'ia (cuali/cuanti). 
+
+Junto con despedirme, invito a las/los miembros del \emph{Comit\'e} a considerar mi postulaci\'on.\unskip
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
