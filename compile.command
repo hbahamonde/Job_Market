@@ -18,7 +18,7 @@ latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Diversity_Statement
 latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Research_Statement.tex
 
 # Teaching Statement LAC
-latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement_LAC.tex
+# latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement_LAC.tex
 
 # Teaching Statement
 latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement.tex
