@@ -41,3 +41,11 @@ Resources/Interviews.mdown
 *.toc
 
 Bahamonde_Job_Talk.pdf
+
+*.blg
+
+*.bbl
+
+*.bcf
+
+*.xml
