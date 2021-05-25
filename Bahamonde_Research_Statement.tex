@@ -49,13 +49,57 @@
 % email input end
 
 \usepackage{color} % for colors
-\usepackage{hyperref} % for links
+
+\usepackage{hyperref}
+\hypersetup{
+    %bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=blue           % color of external links
+}
 
 \hypersetup{
   colorlinks = true,
   urlcolor = blue,
   pdfpagemode = UseNone
 }
+
+
+%%% bib begin
+\usepackage[american]{babel}
+\usepackage{csquotes}
+%\usepackage[style=chicago-authordate,doi=false,isbn=false,url=false,eprint=false]{biblatex}
+
+\usepackage[authordate,isbn=false,doi=false,url=false,eprint=false]{biblatex-chicago}
+\DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
+\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
+
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryCitekey{\clearfield{month}}
+
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/Bahamonde_BibTex2013.bib} 
+
+% USAGES
+%% use \textcite to cite normal
+%% \parencite to cite in parentheses
+%% \footcite to cite in footnote
+%% the default can be modified in autocite=FOO, footnote, for ex. 
+%%% bib end
 
 %----------------------------------------------------------------------------------------
 %	YOUR NAME AND CONTACT INFORMATION
@@ -104,36 +148,32 @@ Rancagua, Chile
 \vspace{-2cm}{\bf \huge Research Statement}\\
 
 %\vspace{-1cm}
-Within comparative politics, my research explores the intersection between inequality and political development, from a political economy perspective. %My {\bf job market paper} (\emph{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/status.txt}\unskip}) is entitled ``\href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}.'' \input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/abstract.txt}\unskip
+Within comparative politics, my research explores from a political economy perspective the intersection between inequality and political development. I will structure this statement in three parts: early, current and future research.
+
+{\bf Early research.} The first pieces of research I published were related to clientelism. I have always been intrigued by the political consequences of economic inequality. As an undergraduate student I had the tremendous opportunity of working with Juan Pablo Luna, particularly, doing field work in one of the most economically heterogeneous district of Santiago de Chile (the capital city of one of the most unequal countries in the world). The fieldwork took place during the legislative campaigns of 2009, and I could witness first hand how some politicians invested their resources very strategically in order to buy votes. Once I started grad school I was lucky enough to work with Bob Kaufman, one of the most important Latinamericanists in the discipline. Under his supervision I had the chance of further exploring the field. Most importantly, during grad school I received the substantive and methodological tools to build a career in academia.
+
+This path led me to publish ``\href{https://journals.sub.uni-hamburg.de/giga/jpla/article/view/1121/1128}{Aiming Right at You: Group versus Individual Clientelistic Targeting in Brazil}'' (Journal of Politics in Latin America). In this paper I leveraged {\bf matching techniques} for observational data. Later on, I designed in Qualtrics two {\bf survey experiments} in the U.S., a list and a conjoint experiment. Both designs conform two different papers. The first one, ``\href{https://github.com/hbahamonde/Vote_Selling/raw/master/Bahamonde_VoteSellingUS.pdf}{Still for Sale: The Micro-Dynamics of Vote Selling in the United States, Evidence From a List Experiment},'' is published in Acta Politica. In this paper I looked at the tipping points at which a representative sample of U.S. citizens (N = 1,479) preferred a monetary incentive rather than voting freely. I find that almost a quarter would sell their vote to a political candidate---interestingly, the data were collected during the 2016 presidential campaign, the one that gave the victory to Donald Trump. The second one, ``\href{https://github.com/hbahamonde/Conjoint_US/raw/master/Bahamonde_Quininao_Conjoint_Letter_PA.pdf}{Vote Selling in the United States: Introducing Support Vector Machine Methods to Analyzing Conjoint Experimental Data},'' (\emph{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}) introduces a new methodology to analyzing conjoint experiments via {\bf machine learning} techniques, particularly, {\bf support vector machines}. 
+
+To conclude this section, I would like to bring to your attention that the methodological aspect of my substantive research agenda represents an important part of my contribution to the discipline. Not only did I minored in quantitative methodology, but also I have a real interest in applying innovative methods to analyzing important questions in comparative politics. This also applies to my current and future research.
 
 
-% Vote Buying in Brazil// explaining the paper
-In ``\href{https://journals.sub.uni-hamburg.de/giga/jpla/article/view/1121/1128}{Aiming Right at You: Group versus Individual Clientelistic Targeting in Brazil}'' (Journal of Politics in Latin America) I used {\bf matching techniques} for observational data. \input{/Users/hectorbahamonde/research/Clientelism_paper/abstract.txt}\unskip 
+{\bf Current research.} Within the behavioral economics framework, I am expanding the inequality-clientelism link. Using the \texttt{Python} language, my coauthor and I are currently designing an {\bf economic experiment}. Economic experiments study real subjects who, in a lab setting, are tasked with a series of decisions. Every decision is associated with an actual ``payoff.'' These payoffs vary according to the quality of the decisions made. I have applied to the {\bf Fondecyt Iniciaci\'on en Investigaci\'on 2022} which hopefully will provide the necessary resources to continue with such project. At this point I am already running a \$2M (CLP) research grant where I am pretesting the design.  This project asserts that the literature has overlooked a number of interesting, and yet, unanswered questions. First and foremost, the approach used by most quantitative scholars focuses exclusively on vote buying (i.e., parties buying votes), completely ignoring the ones who sell their votes (i.e., voters). This is a rather important distinction. Given that the ``party'' and ``voter'' roles (and their respective initial endowments) are assigned at random, we will be able to establish causal inferences. Within the {\bf causal inference framework}, we ask \emph{Would voters still sell their votes to their own party of preference? Would parties buy votes from their own constituencies?} These questions actually pertain to a long-lasting yet unsolved debate between \textcite{Dixit1996}, \textcite{Cox1986} and \textcite{Stokes2005}. Hopefully with this experiment I will be able to contribute to the discipline.
 
+Besides clientelism, I have a strong interest in comparative political development, particularly, democratization and state formation. We have just published ``\href{https://github.com/hbahamonde/Inequality_State_Capacity/raw/main/Bahamonde_Trasberg.pdf}{\input{/Users/hectorbahamonde/research/Inequality_State_Capacity/title.txt}\unskip}'' (\emph{European Journal of Political Economy}, forthcoming). This paper argues that democracy combined with high state capacity produce higher levels of income inequality over time. This relationship operates through the positive effect of high-capacity democratic context on foreign direct investment and financial development. We use a novel measure of state capacity based on cumulative census administration, {\bf fixed-effects} panel regressions with the data from 126 industrial and developing countries between 1970 and 2013, along with the {\bf generalized method of moments} (GMM). 
 
-In addition to that, and with the support of a generous grant, I designed in {\bf Qualtrics} two {\bf experiments} in the U.S. out of a series of experiments to be fielded in Latin America for further comparison. In ``\href{https://github.com/hbahamonde/Vote_Selling/raw/master/Bahamonde_VoteSellingUS.pdf}{Still for Sale: The Micro-Dynamics of Vote Selling in the United States, Evidence From a List Experiment}'' (Acta Politica), I looked at the tipping points at which a sample of U.S. citizens (N = 1,479) prefer a monetary incentive rather than keeping their right to choose whom to vote for. \input{/Users/hectorbahamonde/research/Vote_Selling/abstract.txt}\unskip 
+In the same line, I keep working on my book manuscript entitled \emph{``Structural Transformations in Latin America: State Building and Elite Competition 1850-2010''}. The book explains that the economic structural transformation in Latin America---the secular decline of agriculture and substantial expansion of manufacturing---imposed tight constraints on the way politics was run by the incumbent landowning class. This was a major change due to the advantage the landed elites enjoyed since colonial times. Where the expansion of the industrial sector was weak, post-colonial norms persisted due to institutional inertia, perpetuating the advantaged position of the agricultural class. Leveraging economic sectoral outputs dating back to 1900 until 2010, for a sample of Latin American countries, I use {\bf panel data methods} (particularly, Cox-proportional hazard models), time series analyses (VAR models, impulse response functions, and Granger-causality tests), and fine-grained qualitative data to support my argument. The paper version of the book is entitled ``\href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}}'' (\emph{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/status.txt}\unskip}).
 
-The second experiment is a {\bf conjoint experiment} and it is being analyzed in a separate paper entitled ``\href{https://github.com/hbahamonde/Conjoint_US/raw/master/Bahamonde_Quininao_Conjoint.pdf}{Vote Selling in the United States: Introducing Support Vector Machine Methods to Analyzing Conjoint Experimental Data}'' (\emph{\input{/Users/hectorbahamonde/research/Conjoint_US/status.txt}\unskip}). My coauthor and myself are developing a new methodology to analyzing conjoint experiments via {\bf machine learning} techniques, particularly, {\bf support vector machines}. {\input{/Users/hectorbahamonde/research/Conjoint_US/abstract.txt}\unskip}
+Finally, I have a strong interest in introducing new methods to the discipline. Besides the aforementioned machine learning paper, we have published ``\href{https://doi.org/10.1111/rsp3.12337}{Employment Effects of Covid‐19 across Chilean Regions: An Application of the Translog Cost Function}'' (Regional Science, Policy and Practice).  This piece provides a time-series forecast approach of the regional employment effects of COVID-19 across Chilean regions. In addition to that, we are working on ``\href{https://github.com/hbahamonde/Bahamonde_Kovac/raw/master/abstract.txt}{Not Just Guns or Butter, but What Came First---Guns or Butter? Introducing GVAR to International Relations}.'' In this paper we introduce a new method, the ``Global Vector AutoRegressive'' model. The GVAR system of equations performs better than simply panel VAR equations, particularly, with big-N and big-T data (i.e., all countries, all years). We motivate the substantive problem within the Granger-causality framework (a method which is particularly well suited to study endogenous questions). In concrete, we analyze the long-lasting question of what causes political power at the international level, \emph{is it a developed economy or a strong army?} This method should be appealing to scholars in international relations since it enables them to study a large number of countries during long periods of time. We use data from 1871 to 2012 for all possible countries within that period.
 
-Finally, and within the same project, we are currently designing an {\bf economic experiment} in the lab. \input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/abstract.txt}\unskip
+{\bf Future research.} Part of my long-term research is related to the book project aforementioned. It is in my expectation that the argument will be better explained and understood in a book than in a paper. Next semester I am tutoring a postdoctoral fellow at O'Higgins University who works on the political management of natural resources from a political and sociological standpoint. Hopefully I will be able to move this project forward. 
 
+As of my near-future research, I have a strong interest in the relationship between the ``politics of weakness'' \parencite{Brinks2020}, state capacity, economic inequality and the potential outcomes framework. This line of work seeks to analyze the political consequences of economic inequality in Chile, particularly, during the Covid-19 pandemic. 
 
+I have some preliminary work already done. In ``\href{https://raw.githubusercontent.com/hbahamonde/Tobalaba/master/abstract.txt}{{\input{/Users/hectorbahamonde/Research/Tobalaba/title.txt}\unskip}}'' (\emph{\input{/Users/hectorbahamonde/Research/Tobalaba/status.txt}\unskip}) we exploit a novel aerodrome usage dataset which looks at how Chilean elites were able to flight to their vacation houses, skipping lockdown policies. The paper shows how local authorities faced high political pressures to systematically ignore overseeing air traffic control during the pandemic. Interestingly, authorities were---somewhat---successful at detaining working class citizens. We use regression discontinuity designs and in-depth interviews. While in ``\href{https://github.com/hbahamonde/Bus/raw/main/abstract.txt}{{\input{/Users/hectorbahamonde/Research/Bus/title.txt}\unskip}}'' (\emph{\input{/Users/hectorbahamonde/Research/Bus/status.txt}\unskip})  we explore a digitalized population dataset on daily public transportation and COVID contagion in Santiago de Chile, the capital city of one of the most unequal countries in the world. Using publicly available information on daily contagions of all municipalities in Santiago de Chile and a novel cellphone dataset to capture individual mobility, we exploit hazard models and spatial analyses to show that low-income municipalities systematically bore the cost of the COVID pandemic. Preliminary quantitative evidence makes us suspect that contagion thresholds to restrict mobility in working-class municipalities were higher relative to wealthier municipalities. Both manuscripts go in line with the ``politics of weakness'' literature, suggesting that local authorities chose to be ``weak,'' i.e., conveniently overlooking certain policies while enforcing others. We use hazard models, synthetic control and regression discontinuity design methods.
 
-% main argument of the book
-{\bf My book manuscript} entitled \emph{``Structural Transformations in Latin America: State Building and Elite Competition 1850-2010''} explains that the economic structural transformation in Latin America---the secular decline of agriculture and substantial expansion of manufacturing---imposed tight constraints on the way politics was run by the incumbent landowning class. This was a major change due to the advantage the landed elites enjoyed since colonial times. Where the expansion of the industrial sector was weak, post-colonial norms persisted due to institutional inertia, perpetuating the advantaged position of the agricultural class. Leveraging economic sectoral outputs dating back to 1900 until 2010, for a sample of Latin American countries, I use {\bf panel data methods} (particularly, Cox-proportional hazard models), time series analyses (VAR models, impulse response functions, and Granger-causality tests), and fine-grained qualitative data to support my argument. {\bf Another major contribution of the book} is in measurement. One of the biggest gaps in the literature is the lack of a measurement of state capacities able to capture variations of \emph{stateness} over time. Using a novel dataset, the book proposes measuring state capacities using earthquake data. The rationale is very intuitive: the capacity to enforce quake-sensitive building codes throughout the territory is a \emph{reflection} of the overall (\emph{in})capacity of states of solving both logistic and political limitations at the subnational level. \emph{Why does a 7.0 magnitude earthquake flatten Haiti. leaving at least 100,000 deaths, while a 8.8 earthquake in Chile in the same year leaves just 525 deaths?} By exploiting  variations on earthquake death-tolls and local population to weight the number of deaths since 1900, I measure state capacities over time. Keeping magnitudes constant, casualty differentials should be attributed to the \emph{lack of state capacities}. The paper version of the book is entitled ``\href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}}'' (\emph{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/status.txt}\unskip}).
+To conclude, I have explained that my substantive work explores from a political economy perspective the intersection between inequality and political development. I pay special attention to such topics as state capacity, inequality, democracy and clientelism. Methodologically, I am interested in applying innovative methods (experimental, quasi-experimental and statistical) to political science. Please check my \href{http://www.hectorbahamonde.com/teaching/}{\texttt{teaching portfolio}} and see how my {\bf research and teaching interests match}. 
 
-
-
-
-
-In one of the {\bf sections of the book}, I explain that the structural transformation required both sectors to grow in a \emph{balanced} fashion, \emph{leveling both elites in their relative political, economic, and military capacities}. Leveraging the dual sector model of economic growth, I sketch a theory of political and economic development that stresses the structural economic dependence of both sectors. The agricultural sector supplied labor and cheap foodstuff---which the industrial sector demanded, promoting balanced economic development of both sectors. The political consequence of balanced economic growth was the mutual political dependence and the need of inter-elite compromises that fostered both economic and political development in the long-run. The paper version of the chapter (currently \emph{\input{/Users/hectorbahamonde/Dissertation/Papers/NegativeLink/status.txt}\unskip}) can be downloaded \href{https://github.com/hbahamonde/Negative_Link_Paper/raw/master/Bahamonde_NegativeLink.pdf}{\texttt{here}}. 
-
-
-{\bf Summary and Future Research} In summary, my book manuscript, job market paper and working papers on vote buying and experiments on vote selling work toward exploring the effects of inequality in political development from a comparative perspective. I use a broad methodological approach, historical comparisons, time series analyses and experimental and quasi-experimental methodologies. My goal is to use this toolkit to keep asking ``big'' questions that are fundamental to our discipline. 
-
-My future research will seek to study the connection between elite competition and democratic regimes, exploring the connection between state building and democratic institutions. The first paper within this wave of publications is entitled ``\href{https://github.com/hbahamonde/Inequality_State_Capacity/raw/main/Bahamonde_Trasberg.pdf}{\input{/Users/hectorbahamonde/research/Inequality_State_Capacity/title.txt}\unskip}'' ({\input{/Users/hectorbahamonde/research/Inequality_State_Capacity/status.txt}\unskip}). This study argues that democratic rule combined with high state capacity pro-duce higher levels of income inequality over time. This relationship operates through the positive effect of high-capacity democratic context on foreign direct investment and financial development. The second paper is entitled ``\href{https://raw.githubusercontent.com/hbahamonde/Tobalaba/main/abstract.txt}{\input{/Users/hectorbahamonde/research/Tobalaba/title.txt}\unskip}'' ({\input{/Users/hectorbahamonde/research/Tobalaba/status.txt}\unskip}). {\input{/Users/hectorbahamonde/research/Tobalaba/abstract.txt}\unskip} 
-
-Please check my \href{http://www.hectorbahamonde.com/teaching/}{\texttt{teaching portfolio}} and see how my {\bf research and teaching interests match}. {\input{/Users/hectorbahamonde/Job_Market/ending.tex}\unskip}
+{\input{/Users/hectorbahamonde/Job_Market/ending.tex}\unskip}
 
 
 \vspace{-10cm}
