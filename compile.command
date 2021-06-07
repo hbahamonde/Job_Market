@@ -26,6 +26,9 @@ latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement.
 # Research Plan
 latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Research_Plan.tex
 
+# One Pager
+latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_One_Pager.tex
+
 
 # PORTFOLIOS at the end
 
@@ -39,5 +42,3 @@ latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Portafolio
 # Teaching Portfolio
 latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Portafolio.tex
 
-# One Pager
-latexmk -pdf -cd /Users/hectorbahamonde/Job_Market/Bahamonde_One_Pager.tex
