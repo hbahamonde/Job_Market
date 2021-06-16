@@ -23,7 +23,9 @@
 %\usepackage{booktabs}
 \usepackage{textcomp}
 \usepackage{caption}
+\usepackage{booktabs}
 \usepackage{float}
+\usepackage{pbox}
 %\usepackage{setspace} 			% \doublespacing \singlespacing \onehalfspacing	%doble espacio
 %\label{x:y}													%ocupar para autoref.
 %\autoref{x:y}												%ocupar para autoref.
@@ -307,6 +309,9 @@ I am a political scientist (B.A. and PhD)...
 		\end{figure}
 	
 	\end{columns}
+
+\vspace{\fill}\hspace{\fill}\hyperlink{mart_paper}{\beamerbutton{Details}}
+
 \end{frame}
 
 
@@ -328,6 +333,9 @@ I am a political scientist (B.A. and PhD)...
 		\includegraphics[scale=0.3]{/Users/hectorbahamonde/Job_Market/cover_ap.jpeg}
 		\end{figure}
 	\end{columns}
+
+\vspace{\fill}\hspace{\fill}\hyperlink{vote_selling_paper}{\beamerbutton{Details}}
+
 \end{frame}
 
 
@@ -348,6 +356,9 @@ I am a political scientist (B.A. and PhD)...
 		\includegraphics[scale=0.2]{/Users/hectorbahamonde/Job_Market/cover_jpla.png}
 		\end{figure}
 	\end{columns}
+
+\vspace{\fill}\hspace{\fill}\hyperlink{brazil_paper}{\beamerbutton{Details}}
+
 \end{frame}
 
 
@@ -400,6 +411,7 @@ I am a political scientist (B.A. and PhD)...
 	%\column{0.5\textwidth}
 		\begin{itemize}
 			\item {\color{blue}Economic experiments are ``games''}: subjects embody randomly-assigned roles {\scriptsize(2 parties/1 voter)}.
+			\item {\bf Behavioral economics} framework, {\color{blue}deliberation games}: subjects make decisions and get payed according to the quality of their decisions.
 
 			\item {\color{ForestGreen}Democratic theory}: study conditions of {\bf (i)lliberal democracy} that foster clientelism:
 						\begin{enumerate}
@@ -426,7 +438,7 @@ I am a political scientist (B.A. and PhD)...
 
 
 \miniframeson
-\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}}	
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}\label{conjoint_table}}}	
 \begin{columns}
 	\column{0.5\textwidth}	
 		\begin{itemize}
@@ -533,7 +545,7 @@ I am a political scientist (B.A. and PhD)...
 %\item[] {\scriptsize{\color{blue}\emph{Were elites effectively escaping confinement policies and most importantly fast contagion rates}?}} % dos series de tiempo  
 
 
-\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
+
 \end{frame}
 
 
@@ -560,7 +572,6 @@ I am a political scientist (B.A. and PhD)...
 		\end{figure}
 
 \end{columns}
-\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
 \end{frame}
 
 
@@ -584,7 +595,6 @@ I am a political scientist (B.A. and PhD)...
 			\vspace{-0.1cm}\hspace{-7mm}\includegraphics[scale=0.3]{/Users/hectorbahamonde/research/Bus/BusPlot.pdf}
 		\end{figure}
 \end{columns}
-\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
 \end{frame}
 
 
@@ -592,37 +602,59 @@ I am a political scientist (B.A. and PhD)...
 \begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Bus/title.txt}\unskip}.''}}}	
 
 \begin{columns}
-\column{0.5\textwidth}
-{\color{ForestGreen}{Welfare, Covid and Inequality}}: 
-
+\column{0.6\textwidth}
 		\begin{itemize}
 			%\item Chilean social safety net is very thin. 
 			%\item While the wealthy were able to work from home (or flight to their vacation houses), the working class kept riding the bus to work presentially. 
-			\item This paper explores a digitalized population dataset on daily public transportation and contagions.
-			\item Hypothesis is that the poor bore the bore the cost of the COVID pandemic.\\
-			Lower death thresholds for implementing total lockdown in wealthy municipalities.
+			\item This paper explores a digitalized population dataset on daily public transportation.
+			\item {\bf Hypothesis}: the poor bore the bore the cost of the COVID pandemic.
+				\begin{enumerate}
+					\item {\color{ForestGreen}Inequality}: ``Working from home'' is a regressive policy (most workers had to ride the bus).
+					\item {\color{ForestGreen}Natural Experiment}: lockdown policies are exogenous and not random. {\bf What's the effect of the same policy implemented in poor/wealthy municipalities?}
+				\end{enumerate}
+			% Lower death thresholds for implementing total lockdown in wealthy municipalities.
 		\end{itemize}
 
-\column{0.5\textwidth}
+\column{0.4\textwidth}
 		\begin{figure}[c]
 			\vspace{-0.1cm}\hspace{-7mm}\includegraphics[scale=0.3]{/Users/hectorbahamonde/research/Bus/BusPlot.pdf}
 		\end{figure}
 \end{columns}
-\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
+
 \end{frame}
 
 
+\section{Conclusion}
+
+\subsection{Reasons to move to Turku}
+
+\miniframeson
+\begin{frame}\frametitle{Reasons to move to Turku}
+\begin{enumerate}
+	\item Turku is one of the {\color{ForestGreen}leading research-oriented institutions} in Finland.
+		\begin{itemize}
+			\item The {\color{ForestGreen}INVEST Research Flagship Center} works on socioeconomic differences, which is {\bf my \emph{very} topic of interest!}
+			\item Has the {\color{ForestGreen}PCRClab} lab ({\color{ForestGreen}FIRIPO}): really interesting to implement both {\bf survey} and {\bf lab} experiments!
+			\item Has the {\color{ForestGreen}Participation in Long-Term Decision-Making} (PALO): doing interesting work implementing natural experiments related to ``direct democracy.'' Interesting! {\bf Would love to contribute!}
+		\end{itemize}
+	\item {\color{ForestGreen}Multidisciplinary-oriented} institution, as a whole: diversity is great!
+	\item Finland has an outstanding educational system: would be perfect for my 3YO and 4YO children! (both German nationals).
+\end{enumerate}
+\end{frame}
 
 
-\section{Last But Not Least}
+\subsection{Conclusion}
 
-\begin{frame}\frametitle{Last But Not Least}
+
+\miniframeson
+\begin{frame}\frametitle{In Sum}	
+
+To conclude,
+
 \begin{itemize}
-	\item Attending the main conferences in the discipline.
-	\item Organizing a workshop/mini-conference per year at your institution.
-	\item Giving service to the Philosophy, Contemporary History and Political Science Department, particularly, political science unit.
-	\item Teaching and/or advising undergraduate/graduate courses/students.
-	\item Assuming administrative tasks when necessary.
+	\item I work on political economy: inequality and democracy.
+	\item Experience designing, implementing, and analyzing experiments (survey, lab, natural).
+	\item I'd be very happy to move to Turku and work with you.
 \end{itemize}
 \end{frame}
 
@@ -631,19 +663,49 @@ I am a political scientist (B.A. and PhD)...
 
 \section{Appendix}
 
+
+\miniframesoff
+\begin{frame}\frametitle{TOC}
+\begin{enumerate}
+	\item Research plan (additional slides)
+		\begin{itemize}
+			\item \hyperlink{experimento_vote_selling}{``\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/title.txt}\unskip.''}
+			\item \hyperlink{experimento_conjoint}{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}.''}
+			\item \hyperlink{earthquake_paper}{``{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}.''}
+		\end{itemize}
+	\item Published papers (additional slides)
+		\begin{itemize}
+			\item \hyperlink{mart_paper}{``{\input{/Users/hectorbahamonde/research/Inequality_State_Capacity/title.txt}\unskip}''} {\tiny(EJPE, forthcoming)}.
+			\item \hyperlink{vote_selling_paper}{``{\input{/Users/hectorbahamonde/research/Vote_Selling/title.txt}\unskip}''} {\tiny(AP, forthcoming)}.
+			\item \hyperlink{brazil_paper}{``{\input{/Users/hectorbahamonde/research/Clientelism_paper/title.txt}\unskip}''} {\tiny(JPLA, 2018)}.
+			\item \hyperlink{translog_paper}{``Employment Effects of COVID-19 across Chilean Regions: An Application of the Translog Cost Function''} {\tiny(Regional Science Policy and Practice, 2020)}.
+		\end{itemize}
+\end{enumerate}
+\end{frame}
+
+
+
+
 \subsection{Pipeline: Explained}
 
 
 \miniframesoff
-\begin{frame}\frametitle{{\scriptsize{``\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/title.txt}\unskip.}''}}\label{econ_exp}
+\begin{frame}\frametitle{
+\hypertarget{experimento_vote_selling}{{\scriptsize{``\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/title.txt}\unskip}.''}
+}}\label{econ_exp}
 \begin{columns}
 
 \column{0.5\textwidth}
 {\color{blue}{\bf Tell a supply and demand story}:}
 \begin{itemize}
 	\item Do {\color{orange}parties} target {\bf own supporters} {\scriptsize(Dixit/Londregan and Cox/McCubbins)} or {\bf moderate opposer} {\scriptsize(Stokes)}? 
-	\item At what price?
 	\item Under what conditions do {\color{green}vote sellers} sell to their own party of choosing?
+\end{itemize}
+
+{\color{blue}{\bf Methodologically}:}
+\begin{itemize}
+	\item Programmed in \texttt{OTree}.
+	\item {\bf Formally}: bargaining game (in an extensive form).
 \end{itemize}
 
 \column{0.5\textwidth}
@@ -657,76 +719,200 @@ I am a political scientist (B.A. and PhD)...
 
 
 \miniframesoff
-\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}\label{conjoint_table}}
-	\begin{columns}\column{0.7\textwidth}
+\begin{frame}\frametitle{
+\hypertarget{experimento_conjoint}{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}}
+}
+
+\begin{columns}
+\hspace{-1.5cm}
+\column{0.3\textwidth}
+
 		\begin{itemize}
-			\item {\color{blue}Democratic theory}: Dahl (1971) specifies a number of dimensions any ``polyarchy'' should accomplish (\emph{free press}, \emph{free competition}, \emph{right to run for elections}, etc.)
-			\item The experiment captures in a causal way individual-level attitudes towards those dimensions. 
+			\item \scriptsize{{\color{ForestGreen}Democratic theory}: Dahl (1971) specifies a number of dimensions any ``polyarchy'' should accomplish (\emph{free press}, \emph{free competition}, \emph{right to run for elections}, etc.)}
+			\item {\bf Particularly relevant for {\color{ForestGreen}democratic deliberation}}.
 		\end{itemize}
 
-	\column{0.3\textwidth}
+\column{0.7\textwidth}
+
+
+
 \begin{table}[h]
-\begin{center}
-{\renewcommand{\arraystretch}{2}%
-\scalebox{0.3}{
-\hspace{-2cm}
-\begin{tabular}{cc}
-\hline
-\multicolumn{1}{|c|}{{\bf Candidate 1}}   & \multicolumn{1}{c|}{{\bf Candidate 2}}  \\ \hline
-\multicolumn{1}{|c|}{\small{Media CAN confront the government}}    & \multicolumn{1}{c|}{\small{Media CANNOT confront the government}}   \\ \hline
-\multicolumn{1}{|c|}{\small{President CANNOT rule without Congress}}    & \multicolumn{1}{c|}{\small{President CAN rule without Congress}}   \\ \hline
-\multicolumn{1}{|c|}{\small{Citizens CANNOT vote in the next two elections}}    & \multicolumn{1}{c|}{\small{Citizens CANNOT vote in the next two elections}}   \\ \hline
-\multicolumn{1}{|c|}{\small{Citizens CAN run for office for the next two elections}}    & \multicolumn{1}{c|}{\small{Citizens CAN run for office for the next two elections}}   \\ \hline
-\multicolumn{1}{|c|}{\small{Citizens CAN associate with others and form groups}}    & \multicolumn{1}{c|}{\small{Citizens CANNOT associate with others and form groups}}   \\ \hline
-\multicolumn{2}{c}{\texttt{Which of these candidates represents the lesser of the two evils for you?}} \\ \hline
-\multicolumn{1}{|c|}{\texttt{Candidate 1} {\large$\square$}} & \multicolumn{1}{c|}{\texttt{Candidate 2} {\large$\square$}} \\ \hline
-\end{tabular}}
+\scalebox{0.4}{
+\hspace{-2cm}\begin{tabular}{  c |  m{10cm} | m{9cm} }
+\toprule
+\textbf{{\color{ForestGreen}Dahl's Polyarchy Dimension}} & \textbf{{\color{ForestGreen}Dahl's Requirements for a Democracy}} & {\color{ForestGreen}\textbf{Experimental Operationalization for Conjoint Design}} \\\cline{2-3}
+\multirow{5}{*}{{\bf Formulate preferences}}               & Freedom of expression                             & Media can confront the government                      \\ \cline{2-3}
+                                                           & Alternative sources of information                & Media can confront the government                      \\\cline{2-3}
+                                                           & Right of political leaders to compete for support & President cannot rule without Congress                    \\\cline{2-3}
+                                                           & Right to vote       								& Citizens can vote in the next two elections            \\\cline{2-3}
+														   & Freedom to form and join organizations            & Citizens can associate with others and form groups     \\\cline{2-3}
+\hline\midrule
+\multirow{7}{*}{{\bf Signify preferences}}                 & Freedom of expression                             & Media can confront the government\\ \cline{2-3}
+                                                           & Alternative sources of information                & Media can confront the Government\\ \cline{2-3}
+                                                           & Right of political leaders to compete for support & President cannot rule without Congress\\ \cline{2-3}
+                                                           & Right to vote                                     & Citizens can vote in the next two elections\\ \cline{2-3}
+                                                           & Free and fair elections                           & Citizens can vote in the next two elections\\ \cline{2-3}
+                                                           & Eligibility for public office                     & Citizens can run for office for the next two elections\\\cline{2-3}
+														                               & Freedom to form and join organizations            & Citizens can associate with others and form groups\\ \hline
+\midrule
+\multirow{8}{*}{\pbox{3.5cm}{{\bf Preferences are weighted} \\ {\bf equally in conduct of government}}} & Freedom of expression & Media can confront the government\\  \cline{2-3}
+                                                           & Alternative sources of information                & Media can confront the Government\\ \cline{2-3}
+                                                           & Right of political leaders to compete for support/votes & President cannot rule without Congress\\ \cline{2-3}
+                                                           & Right to vote                                     & Citizens can vote in the next two elections\\ \cline{2-3}
+                                                           & Free and fair elections                           & Citizens can vote in the next two elections \\ \cline{2-3}
+                                                           & Institutions for making government policies depend on votes and other expressions of preference & Citizens can vote in the next two elections\\\cline{2-3}
+                                                           & Eligibility for public office                     & Citizens can run for office for the next two elections\\ \cline{2-3}
+														   & Freedom to form and join organizations & Citizens can associate with others and form groups\\\cline{2-3}
+\bottomrule
+                                                         
+\end{tabular}
 }
-\end{center}
 \end{table}
+
+
 \end{columns}
+\label{conjoint_table}
 \end{frame}
 
 
-\miniframesoff % 1 mapa
-\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Tobalaba/title.txt}\unskip}.''}}}	\label{tobalaba}	
-	\begin{columns}\column{0.6\textwidth}
-		\begin{itemize}
-			\item {\bf Novel data}.
-			\item {\color{ForestGreen}Identification strategy}: 
-				\begin{enumerate}
-					\item Aerodrome is located right in the middle of the wealthiest municipalities. % mapa
-					\item Daily arrivals/departures of an aerodrome {\bf \emph{strictly} used by the elites}. % mapa
-				\end{enumerate}
-			%\item Working class citizens faced heavy control in buses and cars. % foto y series de tiempo
-			%\item However, elites were able to use their airplanes mainly to go to their vacations houses.  % foto y series de tiempo 
-			%\item {\bf Natural experiment} and {\bf RDD}: Intervention---confinement measures----are known and not assigned at random. % dos series de tiempo  
+\miniframesoff
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}}
 
-		\end{itemize}
+\begin{columns}
 
-	\column{0.4\textwidth}
-		\begin{figure}[H]
+\column{0.5\textwidth}
+{\color{blue}{\bf Machine learning}:}
+\begin{itemize}
+	\item We implemented an algorithm to classify attitudes toward every ``policy.''
+	\item These responses were organized in a ``space'' we called $w$.
+	\item We had 5 different $w$'s---one per experimental condition.
+	\item Then using simple OLS methods we run individual regressions between the vote-selling question and every $w$.
+\end{itemize}
+
+\column{0.5\textwidth}
+	\begin{figure}[H]
 		\vspace{-1cm}
 		\hspace{-7mm}
-		\includegraphics[scale=0.25]{/Users/hectorbahamonde/research/Tobalaba/map.pdf}
-		\end{figure}
+		\includegraphics[scale=0.35]{/Users/hectorbahamonde/research/Conjoint_US/figure/density:plot:w:p-1.pdf}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+
+\miniframesoff
+\begin{frame}\frametitle{\hypertarget{earthquake_paper}{{\scriptsize{``{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}.''}}}}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+{\color{blue}{\bf Class structure and state formation}:}
+\begin{itemize}
+	\item There was a clash between {\color{blue}landowners} and {\color{blue}industrialists} over the control for state institutions.
+	\item {\color{ForestGreen}Fiscal sociology}: Using sectoral growth data from 1900's, I developed a state formation theory based on the implementation of the income tax.
+\end{itemize}
+
+\column{0.5\textwidth}
+	\begin{figure}[H]
+		\vspace{-1cm}
+		\hspace{-7mm}
+		\includegraphics[scale=0.35]{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/figure/simulation:plots-1.pdf}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\subsection{Published papers: Additional slides}
+
+\miniframesoff
+\begin{frame}\frametitle{\hypertarget{mart_paper}{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Inequality_State_Capacity/title.txt}\unskip}''}}{\tiny (EJPE, forthcoming)}}}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+{\color{blue}{\bf State Capacity and Democracy Increase Inequality}:}
+\begin{itemize}
+	\item Relationship operates through the effect of high-capacity states and democracy on FDIs.
+	\item We used a novel measurement of state capacity (cumulative census administration)
+	\item {\bf Data and methods}: 126 countries (1970-2013), and FE panel regressions.
+\end{itemize}
+
+\column{0.5\textwidth}
+	\begin{figure}[H]
+		\vspace{-1cm}
+		\hspace{-1.3cm}
+		\includegraphics[scale=0.12]{/Users/hectorbahamonde/research/Inequality_State_Capacity/Cum_Census_Map.jpeg}
+	\end{figure}
 \end{columns}
 \end{frame}
 
 
 
+\miniframesoff
+\begin{frame}\frametitle{\hypertarget{vote_selling_paper}{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Vote_Selling/title.txt}\unskip}''} {\tiny(AP, forthcoming)}}}}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+{\color{blue}{\bf Original Survey Experiment}:}
+\begin{itemize}
+	\item 25\% of Americans are still willing to sell their vote (expensive). {\bf Data are representative at the country level!}
+	\item {\bf Data and methods}: List experiment (N=1,479) to study behaviors subject to social desirability bias (such as selling one's vote) .
+\end{itemize}
+
+\column{0.5\textwidth}
+	\begin{figure}[H]
+		\vspace{-0.2cm}
+		\hspace{-1.3cm}
+		\includegraphics[scale=0.6]{/Users/hectorbahamonde/research/Vote_Selling/figure/list:analysis:social:desirability:plot-1.pdf}
+	\end{figure}
+\end{columns}
+\end{frame}
 
 
 
+\miniframesoff
+\begin{frame}\frametitle{\hypertarget{brazil_paper}{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Clientelism_paper/title.txt}\unskip}''} {\tiny(JPLA, 2018)}}}}
+
+\begin{columns}
+
+\column{0.7\textwidth}
+{\color{blue}{\bf Matching methods for observational data, clientelism and inequality in Brazil}:}
+\begin{itemize}
+	\item Challenges the idea that only the poor are always targeted for clientelism.
+	\item Wealthy individuals living in neighborhoods with lots of poor people are targeted too (Q1): {\bf they are more noticeable (i.e., accountable)!}
+	\item Poor individuals living in neighborhoods with lots of poor people are targeted too only in context of high contestation (Q4).
+\end{itemize}
+
+\column{0.4\textwidth}
+	\begin{figure}[H]
+		\vspace{-0.2cm}
+		\hspace{-0.5cm}
+		\includegraphics[scale=0.45]{/Users/hectorbahamonde/research/Clientelism_paper/figure/plot:four:quadrants-1.pdf}
+	\end{figure}
+\end{columns}
+\end{frame}
 
 
-\subsection{Abstracts}
 
-% todos los papers, incluidos los publicados
+\miniframesoff
+\begin{frame}\frametitle{\hypertarget{translog_paper}{{\scriptsize{``Employment Effects of COVID-19 across Chilean Regions: An Application of the Translog Cost Function''} {\tiny(Regional Science Policy and Practice, 2020)}}}}
 
+\begin{columns}
 
+\column{0.7\textwidth}
+{\color{blue}{\bf Regional effects of Covid Pandemic}:}
+\begin{itemize}
+	\item Aggregated translog cost function (2013–2018) we provide forecasts of regional employment loses (between 700K-800K). 
+	\item Relative impacts were spatially heterogeneous.
+\end{itemize}
 
-
+\column{0.4\textwidth}
+	\begin{figure}[H]
+		\vspace{-1cm}
+		\hspace{-0.5cm}
+		\includegraphics[scale=0.15]{/Users/hectorbahamonde/research/COVID/map.png}
+	\end{figure}
+\end{columns}
+\end{frame}
 
 
 \end{document}
