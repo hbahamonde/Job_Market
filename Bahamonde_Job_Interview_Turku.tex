@@ -361,7 +361,7 @@ I am a political scientist (B.A. and PhD)...
 \miniframesoff
 \begin{frame}
 \centering
-\huge{My research plan at Turku is to continue studying these issues by moving forward several pieces of research I have in the pipeline.}
+\huge{My research plan seeks to study these issues by moving forward several pieces of research I have in the pipeline.}
 \end{frame}
 
 % HERE
@@ -399,15 +399,17 @@ I am a political scientist (B.A. and PhD)...
 	%\begin{columns}
 	%\column{0.5\textwidth}
 		\begin{itemize}
-			\item Economic experiment are ``games'': subjects embody randomly-assigned roles {\scriptsize(2 parties/1 voter)}.
-			\item Study conditions under which ``parties'' buy and ``voters'' sell their votes contingent on randomly-assigned treatments:
-			\begin{itemize}
-				\item {\color{ForestGreen}Endowments}: ``parties'' and ``voters'' ({\color{blue}emulates income inequality}).
-				\item {\color{ForestGreen}Ideology}: ideological distance between ``parties'' and ``voters.''
-				\item {\color{ForestGreen}Contestation}: ``Risk'' of losing the election ({\color{blue}emulates party competition}).
-			\end{itemize}
-		\item {\bf Data are being collected as we speak} (N=200).
+			\item {\color{blue}Economic experiments are ``games''}: subjects embody randomly-assigned roles {\scriptsize(2 parties/1 voter)}.
+
+			\item {\color{ForestGreen}Democratic theory}: study conditions of {\bf (i)lliberal democracy} that foster clientelism:
+						\begin{enumerate}
+							\item {\bf Endowments}: different for ``parties'' and ``voters'' {\scriptsize({\color{blue}emulates income inequality})}.
+							\item {\bf Ideology}: ideological distance between ``parties'' and ``voters'' {\scriptsize({\color{blue}emulates issue/spatial location})}.
+							\item {\bf Contestation}: ``Risk'' of losing the election {\scriptsize({\color{blue}emulates party competition})}.
+						\end{enumerate}
+		\item {\scriptsize{\bf Data are being collected as we speak} (N=200).}
 		\end{itemize}
+
 
 	%\column{0.5\textwidth}
 		%\begin{figure}[H]
@@ -419,30 +421,194 @@ I am a political scientist (B.A. and PhD)...
 		%\end{figure}
 	
 	%\end{columns}
+\vspace{\fill}\hspace{\fill}\hyperlink{econ_exp}{\beamerbutton{Design}}
 \end{frame}
 
 
 \miniframeson
-\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}}		
-\begin{itemize}
-			\item I designed a conjoint experiment in \texttt{Qualtrics}.
-			\item {\scriptsize{\bf Novel data} representative at the United States level (N=1,108).}
-			\item {\bf Conjoint experiments} are good to study the causal effect of {\bf multiple-attribute treatments}.
-			\item {\color{ForestGreen}Democratic theory}: Using Dahl's Polyarchy (1971), we devised different ``political candidates'' who supported different ``policies.''
-			\item Tasked experimental subjects with choosing the ``lesser of two evils.''
-			\item Using machine learning methods, we exploit that information to {\bf classify likely {\color{ForestGreen}vote-sellers}}.
-\end{itemize}
-\vspace{\fill}\hspace{\fill}\hyperlink{conjoint_table}{\beamerbutton{Example of experimental task}}
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}}	
+\begin{columns}
+	\column{0.5\textwidth}	
+		\begin{itemize}
+			\item I designed a {\color{blue}conjoint experiment} in \texttt{Qualtrics}.
+			\item Conjoint experiments are {\color{blue}{good to study the causal effect of multiple-attribute treatments}}.
+			\item {\color{ForestGreen}Democratic theory}: Using Dahl's Polyarchy (1971), I devised different ``political candidates'' who supported different ``policies.''
+			\item {\scriptsize Tasked experimental subjects with choosing a candidate.}
+		\end{itemize}
+		\column{0.5\textwidth}	
+\begin{table}[h]
+\begin{center}
+{\renewcommand{\arraystretch}{2}%
+\scalebox{0.4}{
+\hspace{-2cm}
+\begin{tabular}{cc}
+\hline
+\multicolumn{1}{|c|}{{\bf Candidate 1}}   & \multicolumn{1}{c|}{{\bf Candidate 2}}  \\ \hline
+\multicolumn{1}{|c|}{\small{Media CAN confront the government}}    & \multicolumn{1}{c|}{\small{Media CANNOT confront the government}}   \\ \hline
+\multicolumn{1}{|c|}{\small{President CANNOT rule without Congress}}    & \multicolumn{1}{c|}{\small{President CAN rule without Congress}}   \\ \hline
+\multicolumn{1}{|c|}{\small{Citizens CANNOT vote in the next two elections}}    & \multicolumn{1}{c|}{\small{Citizens CANNOT vote in the next two elections}}   \\ \hline
+\multicolumn{1}{|c|}{\small{Citizens CAN run for office for the next two elections}}    & \multicolumn{1}{c|}{\small{Citizens CAN run for office for the next two elections}}   \\ \hline
+\multicolumn{1}{|c|}{\small{Citizens CAN associate with others and form groups}}    & \multicolumn{1}{c|}{\small{Citizens CANNOT associate with others and form groups}}   \\ \hline
+\multicolumn{2}{c}{\texttt{Which of these candidates represents the lesser of the two evils for you?}} \\ \hline
+\multicolumn{1}{|c|}{\texttt{Candidate 1} {\large$\square$}} & \multicolumn{1}{c|}{\texttt{Candidate 2} {\large$\square$}} \\ \hline
+\end{tabular}}
+}
+\end{center}
+\caption*{{\tiny Attributes are assigned at random. This is just one realization. Five of these tasks were administered for every subject.}}
+\end{table}
+\end{columns}
+\vspace{\fill}\hspace{\fill}\hyperlink{conjoint_table}{\beamerbutton{Details}}
 \end{frame}
+
+
+\miniframesoff
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}}	
+
+\begin{columns}
+	\column{0.65\textwidth}	
+
+
+		\begin{itemize}
+			\item {\color{ForestGreen}Innovative way of exploiting conjoint experimental data}: 
+				\begin{enumerate}
+					\item Using {\bf machine learning methods}, we exploit those data to {\bf classify likely vote-sellers}.
+					\item Building on Dahl (1971), {\color{blue}subjects who distrust ``Free media'' and ``Presidential dependence'' (on Congress) are more likely to sell their vote} in the U.S.
+				\end{enumerate}
+			\item {\scriptsize{\bf I already have this novel data---representative at the United States level} (N=1,108).}
+		\end{itemize}
+
+	\column{0.5\textwidth}
+		\begin{figure}[H]
+		\vspace{-0.5cm}
+		\hspace{-4mm}
+		\includegraphics[scale=0.4]{/Users/hectorbahamonde/research/Conjoint_US/plot_vote_selling.pdf}
+		\end{figure}
+
+
+
+\end{columns}
+\vspace{\fill}\hspace{\fill}\hyperlink{conjoint_table}{\beamerbutton{Details}}
+\end{frame}
+
+
+
 
 \subsection{Pipeline 2: Inequality and COVID19}
 
 \miniframeson
-\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Tobalaba/title.txt}\unskip}''.}}}		
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Tobalaba/title.txt}\unskip}.''}}}		
+
+\begin{columns}
+\column{0.6\textwidth}
+
 \begin{itemize}
-			\item Test
+	\item {\scriptsize\emph{Santiago de Chile} is the capital city of one of the most unequal countries in the world.}
+\end{itemize}
+
+\begin{enumerate}\setcounter{enumi}{0}
+	\item {\color{ForestGreen}{{\bf Unequal} Application of the Rule of Law}}: 
+		\begin{itemize}
+			\item While the state was able to control ordinary citizens when traveling, it ``failed'' to control airspace.
+			\item Study how elites were able to travel to their vacations houses during lockdown via a small aerodrome located in one of the richest municipalities. 
 		\end{itemize}
-\vspace{\fill}\hspace{\fill}\hyperlink{conjoint_table}{\beamerbutton{Example of experimental task}}
+\end{enumerate}
+
+
+\column{0.4\textwidth}
+		\begin{figure}[c]
+		\vspace{-0.1cm}\hspace{-7mm}\includegraphics[scale=0.15]{/Users/hectorbahamonde/research/Tobalaba/control.jpg}
+		\\
+		\vspace{0.5cm}{\hspace{-8mm}\includegraphics[scale=0.23]{/Users/hectorbahamonde/research/Tobalaba/ts_airport.pdf}}
+		\end{figure}
+
+
+\end{columns}
+
+	%\item {\color{ForestGreen}{Natural experiment}}:
+				%\begin{itemize}
+					%\item {\bf Identification strategy}: The aerodrome is strictly used by the elite.
+					%\item {\bf RDD}: confinement policies are exogenous and not-random.
+					%\emph{How effective were the lockdown policies {\bf for the elite}}? % dos series de tiempo  
+				%\end{itemize}
+%\item[] {\scriptsize{\color{blue}\emph{Were elites effectively escaping confinement policies and most importantly fast contagion rates}?}} % dos series de tiempo  
+
+
+\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
+\end{frame}
+
+
+\miniframesoff
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Tobalaba/title.txt}\unskip}.''}}}		
+
+\begin{columns}
+\column{0.5\textwidth}
+
+\begin{enumerate}\setcounter{enumi}{1}
+	\item {\color{ForestGreen}{Natural experiment}}:
+				\begin{itemize}
+					\item {\bf Identification strategy}: The aerodrome is \emph{strictly} used by the elite.
+					\item {\bf RDD}: confinement policies are exogenous and not-random.
+					\emph{How effective were the lockdown policies {\bf for the elite}}? % dos series de tiempo  
+				\end{itemize}
+\end{enumerate}
+
+	\column{0.5\textwidth}
+		\begin{figure}[H]
+		\vspace{-1cm}
+		\hspace{-7mm}
+		\includegraphics[scale=0.25]{/Users/hectorbahamonde/research/Tobalaba/map.pdf}
+		\end{figure}
+
+\end{columns}
+\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
+\end{frame}
+
+
+\miniframeson
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Bus/title.txt}\unskip}.''}}}	
+
+\begin{columns}
+\column{0.5\textwidth}
+{\color{ForestGreen}{Welfare, Covid and Inequality}}: 
+
+		\begin{itemize}
+			\item Chilean social safety net is very thin. 
+			\item While the wealthy were able to work from home (or flight to their vacation houses), the working class kept riding the bus to work presentially. 
+			%\item This paper explores a digitalized population dataset on daily public transportation and contagions.
+			%\item Hypothesis is that the poor bore the bore the cost of the COVID pandemic.\\
+			%Lower death thresholds for implementing total lockdown in wealthy municipalities.
+		\end{itemize}
+
+\column{0.5\textwidth}
+		\begin{figure}[c]
+			\vspace{-0.1cm}\hspace{-7mm}\includegraphics[scale=0.3]{/Users/hectorbahamonde/research/Bus/BusPlot.pdf}
+		\end{figure}
+\end{columns}
+\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
+\end{frame}
+
+
+\miniframesoff
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Bus/title.txt}\unskip}.''}}}	
+
+\begin{columns}
+\column{0.5\textwidth}
+{\color{ForestGreen}{Welfare, Covid and Inequality}}: 
+
+		\begin{itemize}
+			%\item Chilean social safety net is very thin. 
+			%\item While the wealthy were able to work from home (or flight to their vacation houses), the working class kept riding the bus to work presentially. 
+			\item This paper explores a digitalized population dataset on daily public transportation and contagions.
+			\item Hypothesis is that the poor bore the bore the cost of the COVID pandemic.\\
+			Lower death thresholds for implementing total lockdown in wealthy municipalities.
+		\end{itemize}
+
+\column{0.5\textwidth}
+		\begin{figure}[c]
+			\vspace{-0.1cm}\hspace{-7mm}\includegraphics[scale=0.3]{/Users/hectorbahamonde/research/Bus/BusPlot.pdf}
+		\end{figure}
+\end{columns}
+\vspace{\fill}\hspace{\fill}\hyperlink{tobalaba}{\beamerbutton{Details}}
 \end{frame}
 
 
@@ -469,14 +635,15 @@ I am a political scientist (B.A. and PhD)...
 
 
 \miniframesoff
-\begin{frame}\frametitle{{\scriptsize{``\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/title.txt}\unskip.}''}}
+\begin{frame}\frametitle{{\scriptsize{``\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/title.txt}\unskip.}''}}\label{econ_exp}
 \begin{columns}
 
 \column{0.5\textwidth}
-{\bf Tell a supply and demand story}:
+{\color{blue}{\bf Tell a supply and demand story}:}
 \begin{itemize}
-	\item Do parties target own supporters {\scriptsize(Dixit/Londregan and Cox/McCubbins)} or moderate opposer {\scriptsize(Stokes)}? At what price?
-	\item Under what conditions do vote sellers sell to their own party of choosing?
+	\item Do {\color{orange}parties} target {\bf own supporters} {\scriptsize(Dixit/Londregan and Cox/McCubbins)} or {\bf moderate opposer} {\scriptsize(Stokes)}? 
+	\item At what price?
+	\item Under what conditions do {\color{green}vote sellers} sell to their own party of choosing?
 \end{itemize}
 
 \column{0.5\textwidth}
@@ -493,7 +660,7 @@ I am a political scientist (B.A. and PhD)...
 \begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}\label{conjoint_table}}
 	\begin{columns}\column{0.7\textwidth}
 		\begin{itemize}
-			\item {\color{ForestGreen}Democratic theory}: Dahl (1971) specifies a number of dimensions any ``polyarchy'' should accomplish (\emph{free press}, \emph{free competition}, \emph{right to run for elections}, etc.)
+			\item {\color{blue}Democratic theory}: Dahl (1971) specifies a number of dimensions any ``polyarchy'' should accomplish (\emph{free press}, \emph{free competition}, \emph{right to run for elections}, etc.)
 			\item The experiment captures in a causal way individual-level attitudes towards those dimensions. 
 		\end{itemize}
 
@@ -521,25 +688,35 @@ I am a political scientist (B.A. and PhD)...
 \end{frame}
 
 
-\miniframesoff
-\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}'' ({\color{blue}{\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}}).}}}
-	\begin{columns}
-	\column{0.5\textwidth}
+\miniframesoff % 1 mapa
+\begin{frame}\frametitle{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Tobalaba/title.txt}\unskip}.''}}}	\label{tobalaba}	
+	\begin{columns}\column{0.6\textwidth}
 		\begin{itemize}
-			\item I also included a question about vote selling.
-			\item This allows me to study which of those democratic dimensions specified by Dahl (1971) should fail to produce likely vote sellers.
-			\item Finally, we use machine learning methods to {\bf classify likely {\color{ForestGreen}vote-sellers}}.
+			\item {\bf Novel data}.
+			\item {\color{ForestGreen}Identification strategy}: 
+				\begin{enumerate}
+					\item Aerodrome is located right in the middle of the wealthiest municipalities. % mapa
+					\item Daily arrivals/departures of an aerodrome {\bf \emph{strictly} used by the elites}. % mapa
+				\end{enumerate}
+			%\item Working class citizens faced heavy control in buses and cars. % foto y series de tiempo
+			%\item However, elites were able to use their airplanes mainly to go to their vacations houses.  % foto y series de tiempo 
+			%\item {\bf Natural experiment} and {\bf RDD}: Intervention---confinement measures----are known and not assigned at random. % dos series de tiempo  
+
 		\end{itemize}
 
-	\column{0.5\textwidth}
+	\column{0.4\textwidth}
 		\begin{figure}[H]
 		\vspace{-1cm}
 		\hspace{-7mm}
-		\includegraphics[scale=0.25]{/Users/hectorbahamonde/research/Conjoint_US/figure/w:analyses:p:p-1.pdf}
+		\includegraphics[scale=0.25]{/Users/hectorbahamonde/research/Tobalaba/map.pdf}
 		\end{figure}
-	
-	\end{columns}
+\end{columns}
 \end{frame}
+
+
+
+
+
 
 
 
