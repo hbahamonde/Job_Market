@@ -83,7 +83,6 @@
 \makeatother			% to show subsection/section title (3/3)
 
 
-
 % THIS BELOW IS TO MAKE NAVIGATION DOTS MARKED DURING PRESENTATION
 \makeatletter
 \def\slideentry#1#2#3#4#5#6{%
@@ -163,6 +162,19 @@
 \end{beamercolorbox}}%
 }
 \makeatother
+
+
+\lstdefinestyle{base}{
+  language=tex,
+  emptylines=1,
+  breaklines=true,
+  basicstyle=\tiny\color{black},
+  moredelim=**[is][\color{red}]{@}{@},
+  frame=lrtb,
+  numbers=none
+}
+
+
 
 
 
@@ -509,7 +521,7 @@ I am a political scientist (B.A. and PhD).
 				\begin{itemize}
 					\item {\bf Identification strategy}: 
 						\begin{itemize}
-							\item {\tiny Confinement policies are exogenous and not-random.}
+							\item {\tiny Confinement policies are endogenous and not-random.}
 							\item {\tiny Airport is used strictly by the elites.}
 						\end{itemize}
 					\item \emph{How effective were the lockdown policies {\bf for the elite}}? % dos series de tiempo  
@@ -530,7 +542,7 @@ I am a political scientist (B.A. and PhD).
 	%\item {\color{ForestGreen}{Natural experiment}}:
 				%\begin{itemize}
 					%\item {\bf Identification strategy}: The aerodrome is strictly used by the elite.
-					%\item {\bf RDD}: confinement policies are exogenous and not-random.
+					%\item {\bf RDD}: confinement policies are endogenous and not-random.
 					%\emph{How effective were the lockdown policies {\bf for the elite}}? % dos series de tiempo  
 				%\end{itemize}
 %\item[] {\scriptsize{\color{blue}\emph{Were elites effectively escaping confinement policies and most importantly fast contagion rates}?}} % dos series de tiempo  
@@ -552,7 +564,7 @@ I am a political scientist (B.A. and PhD).
 			\item {\bf Hypothesis}: the poor bore the cost of the Covid pandemic.
 				\begin{enumerate}
 					\item {\color{ForestGreen}Welfare, Covid and Inequality}: ``Working from home'' is a regressive policy (blue collar workers had to ride the bus).
-					\item {\color{ForestGreen}Natural Experiment}: lockdown policies are exogenous and not random. {\bf What's the effect of the same policy implemented in poor/wealthy municipalities?}
+					\item {\color{ForestGreen}Natural Experiment}: lockdown policies are endogenous and not random. {\bf What's the effect of the same policy implemented in poor/wealthy municipalities?}
 				\end{enumerate}
 			% Lower death thresholds for implementing total lockdown in wealthy municipalities.
 		\end{itemize}
@@ -811,7 +823,7 @@ I am a political scientist (B.A. and PhD).
 
 				\begin{itemize}
 					\item {\bf Identification strategy}: The aerodrome is \emph{strictly} used by the elite.
-					\item {\bf RDD}: confinement policies are exogenous and not-random.
+					\item {\bf RDD}: confinement policies are endogenous and not-random.
 					\emph{How effective were the lockdown policies {\bf for the elite}}? % dos series de tiempo  
 				\end{itemize}
 
@@ -893,6 +905,60 @@ I am a political scientist (B.A. and PhD).
 \end{frame}
 
 
+\miniframesoff
+\begin{frame}[fragile]\frametitle{\hypertarget{vote_selling_paper}{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Vote_Selling/title.txt}\unskip}''} {\tiny(AP, forthcoming)}}}}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+{\color{ForestGreen}{Original Survey Experiment}}:
+\begin{itemize}
+	\item {\bf Data and methods}: List experiment well suited to study behaviors subject to social desirability bias (such as selling one's vote) .
+	\item N=1,479.
+\end{itemize}
+
+\column{0.5\textwidth}
+    \begin{lstlisting}[language=tex, basicstyle=\tiny, frame=lrtb, numbers=none, style=base]
+Now, you will have to type HOW MANY, if any, of the following illegal activities you might engage in, assuming you would not go to jail.
+
+(1) steal an iPod from a large department store
+(2) speed on the highway because you are late for work/school
+(3) download your favorite music from the internet illegally
+
+Type in HOW MANY (NOT WHICH), if any, of these things you would do.
+\end{lstlisting}
+\end{columns}
+\end{frame}
+
+
+
+
+\miniframesoff
+\begin{frame}[fragile]\frametitle{\hypertarget{vote_selling_paper}{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Vote_Selling/title.txt}\unskip}''} {\tiny(AP, forthcoming)}}}}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+{\color{ForestGreen}{Original Survey Experiment}}:
+\begin{itemize}
+	\item {\bf Data and methods}: List experiment well suited to study behaviors subject to social desirability bias (such as selling one's vote) .
+	\item N=1,479.
+\end{itemize}
+
+\column{0.5\textwidth}
+    \begin{lstlisting}[language=tex, basicstyle=\tiny, frame=lrtb, numbers=none, style=base]
+Now, you will have to type HOW MANY, if any, of the following illegal activities you might engage in, assuming you would not go to jail.
+
+(1) steal an iPod from a large department store
+(2) speed on the highway because you are late for work/school
+@(3) sell your vote to a candidate for $100@
+(4) download your favorite music from the internet illegally
+
+Type in HOW MANY (NOT WHICH), if any, of these things you would do.
+\end{lstlisting}
+\end{columns}
+\end{frame}
+
 
 \miniframesoff
 \begin{frame}\frametitle{\hypertarget{vote_selling_paper}{{\scriptsize{``{\input{/Users/hectorbahamonde/research/Vote_Selling/title.txt}\unskip}''} {\tiny(AP, forthcoming)}}}}
@@ -903,8 +969,6 @@ I am a political scientist (B.A. and PhD).
 {\color{ForestGreen}{Original Survey Experiment}}:
 \begin{itemize}
 	\item 25\% of Americans are still willing to sell their vote (expensive). {\bf Data are representative at the country level!}
-	\item {\bf Data and methods}: List experiment well suited to study behaviors subject to social desirability bias (such as selling one's vote) .
-	\item N=1,479.
 \end{itemize}
 
 \column{0.5\textwidth}
