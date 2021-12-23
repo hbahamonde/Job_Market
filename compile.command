@@ -1,5 +1,5 @@
 # in terminal, make sure this is run just once:
-# chmod +x /Users/hectorbahamonde/Job_Market/compile.command
+# chmod +x /Users/hectorbahamonde/Job_Market/compile.command
 # I believe, it's to give permission to the file to run
 
 # Cover Letter
