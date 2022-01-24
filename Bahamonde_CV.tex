@@ -22,6 +22,12 @@
 \usepackage[T1]{fontenc}
 \usepackage[sc,osf]{mathpazo}
 
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=authoryear,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+%\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
+
 
 
 % Set your name here
@@ -34,14 +40,26 @@
 
 % The following metadata will show up in the PDF properties
 \hypersetup{
-  colorlinks = true,
-  urlcolor = blue,
-  pdfauthor = {\name},
-  pdfkeywords = {political science, economic development, methods},
-  pdftitle = {\name: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
-  pdfpagemode = UseNone
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat's bookmarks
+    pdftoolbar=true,        % show Acrobat's toolbar?
+    pdfmenubar=true,        % show Acrobat's menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=blue           % color of external links
 }
+
 
 \geometry{
   body={6.5in, 8.5in},
@@ -114,7 +132,7 @@ CV last updated: \today. \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Education
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\input{/Users/hectorbahamonde/Job_Market/CV_education.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_education.tex}\unskip}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,7 +140,7 @@ CV last updated: \today. \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Academic Employment}
 
-{\input{/Users/hectorbahamonde/Job_Market/CV_academic_employment.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_academic_employment.tex}\unskip}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Appointments
@@ -130,24 +148,24 @@ CV last updated: \today. \\
 \subsection*{Appointments}
 
 \begin{itemize}
-  \item[\textcolor{gray}{\textbullet}] {\bf Program Coordinator}: Public Administration UOH, 2018.
-  \item[\textcolor{gray}{\textbullet}] {\bf Researcher}: Labor Studies UOH, 2020---today.
-  \item[\textcolor{gray}{\textbullet}] {\bf Researcher}: Millennium Institute, Foundational Research on Data, 2020---today.
+  \item[\textcolor{gray}{\textbullet}] {\bf Adjunct Researcher}: Millennium Institute, Foundational Research on Data, 2020---today.
   \item[\textcolor{gray}{\textbullet}] {\bf Editorial Board Member}: ``\emph{Social Sciences}'' journal, Springer Nature, 2020---today.
+  \item[\textcolor{gray}{\textbullet}] {\bf Program Coordinator}: Public Administration UOH, 2018.
+  \item[\textcolor{gray}{\textbullet}] {\bf Researcher}: Labor Studies UOH, 2020.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Research Interest -- Dissertation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Research}
-{\input{/Users/hectorbahamonde/Job_Market/CV_overview_research.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_overview_research.tex}\unskip}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Working Papers -- Published Papers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\input{/Users/hectorbahamonde/Job_Market/CV_research.tex}}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_research.tex}}
 
 
 
@@ -156,7 +174,7 @@ CV last updated: \today. \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Conference Talks}
 
-{\input{/Users/hectorbahamonde/Job_Market/CV_conferences.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_conferences.tex}\unskip}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,7 +182,7 @@ CV last updated: \today. \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Invited Talks}
 
-{\input{/Users/hectorbahamonde/Job_Market/CV_invited_talks.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_invited_talks.tex}\unskip}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -195,7 +213,7 @@ CV last updated: \today. \\
 % Grants
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Grants, Fellowships, \& Awards}
-{\input{/Users/hectorbahamonde/Job_Market/CV_grants.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_grants.tex}\unskip}
 
 
 
@@ -204,7 +222,7 @@ CV last updated: \today. \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Teaching}
 
-{\input{/Users/hectorbahamonde/Job_Market/CV_teaching.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_teaching.tex}\unskip}
 
 \begin{enumerate}
 \item[\Pointinghand]  {\bf Also I would be very happy to teach the entire methods sequence (undergraduate and/or graduate)}, including but not limited to: {\color{gray}time series and panel-data methods, experiments and causal inference for the social sciences, epistemology and qualitative methods, statistics for the social sciences (frequentist/Bayesian) and statistical programming}. I can be very flexible and take care of the needs of the institution.
@@ -259,7 +277,7 @@ CV last updated: \today. \\
 % Misc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Misc}
-{\input{/Users/hectorbahamonde/Job_Market/CV_misc.tex}\unskip}
+{\input{/Users/hectorbahamonde/RU/Job_Market/CV_misc.tex}\unskip}
 
 
 
