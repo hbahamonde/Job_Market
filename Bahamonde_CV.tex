@@ -24,7 +24,8 @@
 
 \usepackage[american]{babel}
 \usepackage{csquotes}
-\usepackage[style=authoryear,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+\usepackage[backend=biber,style=authoryear,date=year,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+\renewbibmacro{in:}{} % this should go immediately below calling biblatex 
 %\DeclareLanguageMapping{american}{american-apa}
 \addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
 
