@@ -1,0 +1,119 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+\usepackage{standalone}
+
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1in}{\vspace{0.35in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+\readfile{/Users/hectorbahamonde/Bibliografia_PoliSci/email.txt}
+% email input end
+
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf Hector Bahamonde, PhD}\\
+{\color{blue}{\bf Senior Researcher}}\\
+\emph{{\color{blue}INVEST Flagship Centre}}\\
+{\color{blue}University of Turku}\\
+Turku, Finland
+}
+
+\phonefrom{+358403621438} % Phone number
+
+\emailfrom{\href{mailto:hibano@utu.fi}{hibano@utu.fi} \\ 
+\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+\today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
+\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+% begining
+{\input{/Users/hectorbahamonde/Job_Market/Bahamonde_Cover_letter_P1.tex}\unskip}
+
+While I've been an academic for several years, I think my analytical, programming and communication skills can be better rewarded in the private sector. Essentially, I don't see a difference between my day-to-day tasks and the tasks this position requires: lots of statistical testing, computational programming, experimental designing, team-working, traveling for meetings/presentations, etc. You might call these things differently but essentially they are the same. 
+
+If you consider my profile is relevant to your ends, my proposal to you is that if the conditions are right (i.e., salary and work-life balance wise) I would happily switch to the private sector. I think I have so much to contribute to your organization. My thinking is that I have trained several cohorts of students to perform well in the private sector that I know for sure my profile should match your needs.
+
+Personally, I am an easy going person, non-hierarchical and team-worker, and always ready and happy to learn new stuff. 
+
+
+% ending
+{\input{/Users/hectorbahamonde/Job_Market/ending.tex}\unskip}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
