@@ -1,0 +1,146 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+\usepackage{standalone}
+
+\usepackage{hyperref}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,date=year,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+\renewbibmacro{in:}{} % this should go immediately below calling biblatex 
+%\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat's bookmarks
+    pdftoolbar=true,        % show Acrobat's toolbar?
+    pdfmenubar=true,        % show Acrobat's menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1in}{\vspace{0.35in}
+\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+% email input begin
+\newread\fid
+\newcommand{\readfile}[1]% #1 = filename
+{\bgroup
+  \endlinechar=-1
+  \openin\fid=#1
+  \read\fid to\filetext
+  \loop\ifx\empty\filetext\relax% skip over comments
+    \read\fid to\filetext
+  \repeat
+  \closein\fid
+  \global\let\filetext=\filetext
+\egroup}
+%\readfile{/Users/hectorbahamonde/Bibliografia_PoliSci/email.txt}
+% email input end
+
+\usepackage{color} % for colors
+\usepackage{hyperref} % for links
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf Hector Bahamonde, PhD}\\
+{\color{blue}{\bf Senior Researcher}}\\
+\emph{{\color{blue}INVEST Flagship Centre}}\\
+{\color{blue}University of Turku}\\
+Turku, Finland
+}
+
+\phonefrom{+358403621438} % Phone number
+
+\emailfrom{\href{mailto:hibano@utu.fi}{hibano@utu.fi} \\ 
+\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+\today}% Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{\vspace{-1cm}Dear Rector of the University of Turku,} % Greeting text
+%\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+ %introduction
+\vspace{-0.3cm}I am writing to apply for the title of Docent at the Faculty of Social Sciences of the University of Turku. Currently, I am a \href{https://www.utu.fi/en/people/hector-bahamonde-norambuena}{Senior Researcher} at the INVEST Flagship Centre at the University of Turku. I also serve as the Research Director of the \href{https://www.utu.fi/en/investhub}{INVEST-Hub}, an interdisciplinary center about experimental and quantitative social research. I obtained my B.A. in Political Science at Catholic University of Chile. After receiving my PhD in Political Science from Rutgers University-New Brunswick, NJ, U.S. in May 2017, I spent one year as a post-doctoral fellow at Tulane University-New Orleans, LA, U.S. Before coming to the University of Turku, I was an Assistant Professor (tenure-track) at O$'$Higgins University, in Chile for two years. My long-term plan is to settle in Turku, and to build an academic career at the University of Turku, hopefully securing a tenure-track position in my field. Thus, the title of Docent, to me, is a stepping stone in my long-term development plan. In this statement I will summarize my accomplishments and future research and teaching plans.
+
+{\bf Research and scientific activities}. Within Political Science, my primary subfield is the political economy of inequality, democratic development and clientelism. In simple, I am interested in how economic conditions---for example, inequality, economic growth, poverty, economic losses and gains, among others---affect democracy itself and people's attitudes toward democracy. Research methods are an important part of my research. In every piece I publish I pay considerable attention to my identification strategy, as well as the methods I employ. For example, in \href{https://doi.org/10.1016/j.electstud.2022.102497}{\textcite{Bahamonde2021a}}
+
+% bio and my research in general
+
+
+
+
+% ending
+{\input{/Users/hectorbahamonde/Job_Market/ending.tex}\unskip}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
