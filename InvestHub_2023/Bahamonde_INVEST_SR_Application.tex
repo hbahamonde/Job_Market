@@ -1,0 +1,157 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+%\usepackage{charter} % Use the Charter font for the document text
+\usepackage{graphics}
+
+\usepackage{standalone}
+
+%% with this patch, the newlfm should work (BEGIN)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+%% with this patch, the newlfm should work (END)
+
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+\includegraphics[width=1.3\linewidth]{/Users/hectorbahamonde/Job_Market/logo2.jpg}}} % Company/institution logo at the top left of the page
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{\texttt{p}} % Customize the "Telephone" text
+\PhrEmail{\texttt{e}} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+
+\usepackage{color} % for colors
+
+\usepackage{hyperref}
+\hypersetup{
+    %bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfpagemode = UseNone
+}
+
+
+%%% bib begin
+\usepackage[american]{babel}
+\usepackage{csquotes}
+%\usepackage[style=chicago-authordate,doi=false,isbn=false,url=false,eprint=false]{biblatex}
+
+\usepackage[authordate,isbn=false,doi=false,url=false,eprint=false]{biblatex-chicago}
+\DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
+\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
+
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryCitekey{\clearfield{month}}
+
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/Bahamonde_BibTex2013.bib} 
+
+% USAGES
+%% use \textcite to cite normal
+%% \parencite to cite in parentheses
+%% \footcite to cite in footnote
+%% the default can be modified in autocite=FOO, footnote, for ex. 
+%%% bib end
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
+
+\addrfrom{
+{\vspace{-2cm}}\\ % Date
+[12pt]
+{\bf Hector Bahamonde, PhD}\\
+{\color{blue}{\bf Senior Researcher}}\\
+\emph{\href{https://invest.utu.fi/welfare-research-and-ecosystem/investhub/}{INVESThub}, \href{https://invest.utu.fi}{INVEST Research Flagship Centre}}\\
+{\color{blue}University of Turku}\\
+Turku, Finland
+}
+
+\phonefrom{+358 (0) 40-362-1438} % Phone number
+
+\emailfrom{\href{mailto:hibano@utu.fi}{hibano@utu.fi} \\ 
+\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
+\today}% Link to last version
+
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+%\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
+%\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+%\vspace{-1cm}
+\vspace{-2cm}I am writing to apply for the tenure-track position available at the Faculty of Social Sciences of the University of Turku. Currently, I am a Senior Researcher at the INVEST flagship unit, University of Turku. In this cover letter I will outline my motivations to the task and vision for the future development of research, teaching and societal interaction in the discipline.
+
+% Accomplishments
+% 12 conferences/talks.
+% 3 papers publihed in top journals under UTU affiliation, and 1 during transition.
+% Grants sent/about to send Kone, Fnnish Cult., ERC, Ak of Fin
+
+
+
+% personal
+Finally, Finland---and the City of Turku in particular---has been a welcoming, friendly, and overall a really nice place to call \emph{home} and to rise our two small children (5 and 3 years-old). We all have fell in love with its people, culture, language, weather and its connection with nature. All these personal and family factors, for sure, constitute another really important motivation for me to apply for the tenure-track position. In fact, not only my wife and me are taking a \emph{Finnish for Beginners} language course, but also Tobias and Olimpia are attending an all-Finnish language daycare since October 2021. Since my wife has German passport, the immigration process for us might facilitate things, specially now that she's looking for a job in Turku. All in all, we've taken---from the very beginning---my \emph{INVEST Senior Researcher} opportunity not only very seriously, but also as a long-term family project. 
+
+Thank you for considering my application. I look forward to hearing from you. Should you have any questions about my application, please do contact me. I'll be happy to clarify any doubts you might have.
+
+
+
+
+\vspace{3cm}
+
+{\hspace{12cm}Hector Bahamonde}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
