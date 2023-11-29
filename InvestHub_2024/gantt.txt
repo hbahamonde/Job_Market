@@ -1,0 +1,46 @@
+---
+displayMode: compact
+---
+gantt
+    dateFormat  YYYY-MM-DD
+    axisFormat  %y
+    title Research Plan: Gantt Chart 2024-2028
+    todayMarker off
+    
+section Activity 1
+Waves 1, 2, 3: 2024-05-01, 2024-11-01
+Waves 4, 5, 6: 2025-05-01, 2025-11-01
+Waves 7, 8, 9: 2026-05-01, 2026-11-01
+Waves 10, 11, 12: 2027-05-01, 2027-11-01
+Waves 13, 14, 15: 2028-05-01, 2028-11-01
+
+
+Design/Pre-test:   2024-01-01, 120d
+Papers writting and publishing: 2027-05-01,  2028-12-31
+Data analyses, Conferences/Workshops:  2024-05-02, 4y
+
+
+
+
+section Activity 2
+
+Design :  2025-01-01  , 250d
+Pre-test :  2025-09-08  , 200d
+Waves 1-10: 2026-03-26, 2026-10-01
+
+
+
+Data analysis, Conferences/Workshops:  2026-03-26 , 2027-01-01
+Papers writing and publishing: 2027-01-01, 1y
+
+
+#####
+
+{
+  "theme": "default",
+  "max-width": "100%",
+  "overflow": "scroll",
+  "min-height":"400px",
+  "width": "auto"
+}
+
