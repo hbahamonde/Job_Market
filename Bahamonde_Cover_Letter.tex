@@ -9,6 +9,14 @@
 
 \usepackage{standalone}
 
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,date=year,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+\renewbibmacro{in:}{} % this should go immediately below calling biblatex 
+%\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
+
+
 %% with this patch, the newlfm should work (BEGIN)
 \usepackage{etoolbox}
 \makeatletter
@@ -31,6 +39,8 @@
 \PhrEmail{\texttt{e}} % Customize the "E-mail" text
 
 \lthUiuc % Print the company/institution logo
+
+
 
 % email input begin
 \newread\fid
@@ -75,7 +85,7 @@ Turku, Finland
 
 \phonefrom{+358403621438} % Phone number
 
-\emailfrom{\href{mailto:hibano@utu.fi}{hibano@utu.fi} \\ 
+\emailfrom{\href{mailto:hector.bahamonde@utu.fi}{hector.bahamonde@utu.fi} \\ 
 \texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
 \today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
 
@@ -103,14 +113,14 @@ Turku, Finland
 {\input{/Users/hectorbahamonde/Job_Market/Bahamonde_Cover_letter_P1.tex}\unskip}
 
 
-In this cover letter I will highlight some details about my research and teaching agendas.
+In this cover letter I will highlight some details about my research and teaching agendas. As it should become clear, the job ad and my qualifications and experience are a great match. Also, while I am happy in my current position, I look forward to stepping up my career and take bigger responsabilities.
 
 % papers
-{\bf Inequality and clientelism.} I kindly invite the reader to read both ``\href{https://journals.sub.uni-hamburg.de/giga/jpla/article/view/1121/1128}{Aiming Right at You: Group versus Individual Clientelistic Targeting in Brazil}'' (Journal of Politics in Latin America, 2018) and ``\href{https://doi.org/10.1057/s41269-020-00174-4}{Still for Sale: The Micro-Dynamics of Vote Selling in the United States, Evidence From a List Experiment}'' ({\input{/Users/hectorbahamonde/research/Vote_Selling/status.txt}\unskip}). In both pieces I challenge the traditional role attributed to {\bf poverty} when explaining clientelism. Instead, I try to switch the focus to {\bf income} inequality. Both papers used top-notch statistical and experimental methods---and when possible, a novel dataset representative at the country level (collected thanks to a generous grant I received). Finally, in ``\href{https://doi.org/10.1016/j.electstud.2022.102497}{Electoral Risk and Vote Buying, Introducing Prospect Theory to the Experimental Study of Clientelism}'' ({\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/status.txt}\unskip}) we developed an economic experiment to test the conditions under which parties engage in clientelism. Income inequality plays a big role in explaining vote buying.
+{\bf Inequality and clientelism.} I kindly invite the reader to read both ``\href{https://journals.sub.uni-hamburg.de/giga/jpla/article/view/1121/1128}{Aiming Right at You: Group versus Individual Clientelistic Targeting in Brazil}'' (Journal of Politics in Latin America, 2018) and ``\href{https://doi.org/10.1057/s41269-020-00174-4}{Still for Sale: The Micro-Dynamics of Vote Selling in the United States, Evidence From a List Experiment}'' ({\input{/Users/hectorbahamonde/research/Vote_Selling/status.txt}\unskip}). In both pieces I challenge the traditional role attributed to {\bf poverty} when explaining clientelism. Instead, I try to switch the focus to {\bf income inequality}. Both papers used top-notch statistical and experimental methods---and when possible, a novel dataset representative at the country level (collected thanks to a generous grant I received). Finally, in ``\href{https://doi.org/10.1016/j.electstud.2022.102497}{Electoral Risk and Vote Buying, Introducing Prospect Theory to the Experimental Study of Clientelism}'' ({\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/status.txt}\unskip}) we developed an economic experiment to test the conditions under which parties engage in clientelism. Income inequality plays a big role in explaining vote buying.
 
-{\bf Economic inequality and democracy.} We have published a paper that explores the relationship between state capacity, democracy and inequality. Using time-series econometrics we find in ``\href{https://doi.org/10.1016/j.ejpoleco.2021.102048}{Inclusive Institutions, Unequal Outcomes: Democracy, State Capacity, and Income Inequality}'' ({\input{/Users/hectorbahamonde/research/Inequality_State_Capacity/status.txt}\unskip}) that democratic rule combined with high state infrastructural power produce \emph{higher} levels of income inequality over time. This relationship operates through the positive effect of high-capacity democratic context on investor confidence, FDIs and financial development. Within the same line of research, in ``\href{https://github.com/hbahamonde/Physical/raw/main/Bahamonde_Sarpila.pdf}{{\input{/Users/hectorbahamonde/research/Physical/title.txt}\unskip}}'' ({\input{/Users/hectorbahamonde/research/Physical/status.txt}\unskip}) we discover that female candidates that \emph{look like} they have working-class occupations are electorally penalized when running for elections--male candidates are not affected by their working-class looks.
+{\bf Economic inequality and democracy.} We have published a paper that explores the relationship between state capacity, democracy and inequality. Using time-series econometrics we find in ``\href{https://doi.org/10.1016/j.ejpoleco.2021.102048}{Inclusive Institutions, Unequal Outcomes: Democracy, State Capacity, and Income Inequality}'' ({\input{/Users/hectorbahamonde/research/Inequality_State_Capacity/status.txt}\unskip}) that democratic rule combined with high state infrastructural power produce \emph{higher} levels of income inequality over time. This relationship operates through the positive effect of high-capacity democratic context on investor confidence, FDIs and financial development. Within the same line of research, in ``\href{https://doi.org/10.1111/pops.12940}{\fullcite{Bahamonde:2023}}'' we discover that female candidates that \emph{look like} they have working-class occupations are electorally penalized when running for elections--male candidates are not affected by their working-class looks.
 
-{\bf State building.} Using a novel dataset on historical earthquakes to proxy state capacity, in ``\href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{{\input{/Users/hectorbahamonde/research/Earthquake_Paper/title.txt}\unskip}}'' ({\input{/Users/hectorbahamonde/research/Earthquake_Paper/status.txt}\unskip}) I explain that sectoral conflicts between the landed and industrial elites fostered inter-elite compromises that lead to higher levels of state capacity over time. The paper seeks to analyze how economic structural transformations in Latin America helped states to make institutional investments that lead to the formation of states with higher capacity. I leverage fine-grained historical case study comparisons, sectoral economic outputs from 1900 to the present, Bayesian time-series econometric techniques, hazard models, and a novel earthquake dataset that covers sub-national death tolls from 1900 to the present to measure state capacity. This project builds on the fiscal sociology literature and the dual-sector economy model. 
+%{\bf State building.} Using a novel dataset on historical earthquakes to proxy state capacity, in ``\href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{{\input{/Users/hectorbahamonde/research/Earthquake_Paper/title.txt}\unskip}}'' ({\input{/Users/hectorbahamonde/research/Earthquake_Paper/status.txt}\unskip}) I explain that sectoral conflicts between the landed and industrial elites fostered inter-elite compromises that lead to higher levels of state capacity over time. The paper seeks to analyze how economic structural transformations in Latin America helped states to make institutional investments that lead to the formation of states with higher capacity. I leverage fine-grained historical case study comparisons, sectoral economic outputs from 1900 to the present, Bayesian time-series econometric techniques, hazard models, and a novel earthquake dataset that covers sub-national death tolls from 1900 to the present to measure state capacity. This project builds on the fiscal sociology literature and the dual-sector economy model. 
 
 
 % agenda: structure / behavior
