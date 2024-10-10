@@ -1,100 +1,103 @@
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
 
-\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+\documentclass[letterpaper]{article}
 
-%\usepackage{charter} % Use the Charter font for the document text
-\usepackage{graphics}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{enumitem,xcolor}
 
-\usepackage{color} % for colors
-\usepackage{hyperref} % for links
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
 
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,date=year,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+\renewbibmacro{in:}{} % this should go immediately below calling biblatex 
+%\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
+
+
+
+% Set your name here
+\def\name{Research Statement}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+% \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}
+
+% The following metadata will show up in the PDF properties
 \hypersetup{
-  colorlinks = true,
-  urlcolor = blue,
-  pdfpagemode = UseNone
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat's bookmarks
+    pdftoolbar=true,        % show Acrobat's toolbar?
+    pdfmenubar=true,        % show Acrobat's menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=blue           % color of external links
 }
 
-\usepackage{standalone}
 
-%% with this patch, the newlfm should work (BEGIN)
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
-\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
-\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
-\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
-\makeatother
-%% with this patch, the newlfm should work (END)
-
-\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
-\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
-\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
-
-\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
-\newlfmP{addrfromphone} % Print a phone number under the sender's address
-\newlfmP{addrfromemail} % Print an email address under the sender's address
-\PhrPhone{\texttt{p}} % Customize the "Telephone" text
-\PhrEmail{\texttt{e}} % Customize the "E-mail" text
-
-\lthUiuc % Print the company/institution logo
-
-% email input begin
-\newread\fid
-\newcommand{\readfile}[1]% #1 = filename
-{\bgroup
-  \endlinechar=-1
-  \openin\fid=#1
-  \read\fid to\filetext
-  \loop\ifx\empty\filetext\relax% skip over comments
-    \read\fid to\filetext
-  \repeat
-  \closein\fid
-  \global\let\filetext=\filetext
-\egroup}
-\readfile{/Users/hectorbahamonde/Bibliografia_PoliSci/email.txt}
-% email input end
-
-
-
-%----------------------------------------------------------------------------------------
-%	YOUR NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-%\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
-
-\addrfrom{
-{\vspace{-2cm}}\\ % Date
-[12pt]
-{\bf Hector Bahamonde, PhD}\\
-{\color{blue}{\bf Assistant Professor}}\\
-\emph{{\color{blue}Social Sciences Institute}}\\
-{\color{blue}O$'$Higgins University}\\
-Rancagua, Chile
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
 }
 
-\phonefrom{+1(504) 941-9131} % Phone number
+% Customize page headers
+\pagestyle{myheadings}
+\markright{{\tiny \name}}
+\thispagestyle{empty}
 
-\emailfrom{\href{mailto:\filetext}{\filetext} \\ 
-\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
-\today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
 
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
 
-%----------------------------------------------------------------------------------------
-%	ADDRESSEE AND GREETING/CLOSING
-%----------------------------------------------------------------------------------------
+% Don't indent paragraphs.
+\setlength\parindent{0em}
 
-%\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
-%\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
-
-
-
-
-%----------------------------------------------------------------------------------------
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
 
 \begin{document}
-\begin{newlfm}
 
 %----------------------------------------------------------------------------------------
 %	LETTER CONTENT
@@ -103,7 +106,30 @@ Rancagua, Chile
 
 
 % PART I
-{\input{/Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement_P1.tex}\unskip}
+\vspace{-2cm}{\bf \huge Teaching Statement}\\
+
+\paragraph{Teaching Philosophy.} As an instructor, my goal has always been to sow the seed of curiosity, because it is the first stepping stone of learning. One of the major challenges of teaching comparative politics is that it is a stream of conflicting theories, approaches, and methodologies. My belief is that this might be overwhelming for students. Hence, my teaching philosophy is to serve as a \emph{guide} in the process of discovering what comparative politics, democracy, development, and political economy are.
+
+% UOH
+\paragraph{}At O'Higgins University I teach seminar courses in \href{https://github.com/hbahamonde/Ciencia_Politica_I/raw/master/Bahamonde_Ciencia_Politica_I.pdf}{comparative politics} and \href{https://github.com/hbahamonde/Ciencia_Politica_II/raw/master/Bahamonde_Ciencia_Politica_II.pdf}{comparative political economy}, as well as the methods sequence in the Economics program (both \href{https://github.com/hbahamonde/OLS/raw/master/Bahamonde_OLS.pdf}{OLS} and \href{https://github.com/hbahamonde/MLE/raw/master/Bahamonde_MLE.pdf}{MLE-causal inference}). After a good number of years teaching in the United States, I've decided to make use of my experience here at home. What I've discovered, is that no matter what the country is, the needs are the same: students need \emph{proactive mentors} in their seek of knowledge. 
+
+% tulane
+\paragraph{}In the spring of 2018, while I was at {\bf Tulane University}, I taught \href{https://github.com/hbahamonde/Comparative_Politics_UGRAD/raw/master/Bahamonde_Comparative_Politics_Syllabus_UGRAD.pdf}{Introduction to Comparative Politics}. It was a really enjoyable experience, for me and my students (check my \href{https://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Teaching_Portafolio.pdf}{teaching evaluations}). I designed the syllabus not only thinking about how to retain the interest of political science / global studies majors, but also about how to captivate and motivate prospective students. And while I put heavy weight on participation, my experience teaching at Rutgers taught me how to create a classroom environment of intellectual curiosity and mutual respect. My number one rule is to approach all these big questions by presenting the material in such way that my students feel intrigued about it. I believe this to be the main ingredient to train individuals who can think critically and navigate the major debates in the field---not only from a theoretical perspective, but also from an applied point of view.
+
+% TA @ RU
+\paragraph{}As a teaching assistant at {\bf Rutgers University}, I was fortunate enough to teach in one of the most diverse schools in the country. As an engaging instructor, I took pedagogical advantage of this situation by bringing into the classroom many examples from different parts of the world. Teaching in such a diverse environment gave me extensive training in how to approach controversial issues, and also in how to present the material in an interesting way for \emph{all} students, regardless of their different cultural and economic backgrounds. You can access my diversity statement \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Diversity_Statement.pdf}{here}.
+
+
+% TA @ RU: Methods course.
+\paragraph{}I have not only taught at the undergraduate level, but I have also served as a {\bf teaching assistant at the graduate level}. In the fall of 2015, I served as the TA of the \emph{Introduction to Statistics} course taught by Professor Beth Leech. It was a great experience. For instance, I gave a talk on how to present statistical models in an appealing and intuitive way. I engaged my fellow graduate students in a way such that they could not only \emph{see} how statistical results should look like, but also how to actually do it. 
+
+% Teaching Math Camp
+\paragraph{}In the winter of 2015, I had the opportunity to {\bf teach the} \href{https://github.com/hbahamonde/Math-Camp/raw/master/Syllabus/Math_Camp_Syllabus.pdf}{{\bf Math Camp and Introduction to Computing}} course that ran all day, for an entire week. The course was intended for first-year graduate students, and it covered all necessary elements to perform well in the methods sequence. In general, this is a complex subject matter to teach; it requires superb organizational and teaching skills. I decided then to adopt a ``\emph{no child left behind}'' policy. This is very important to me, not only in this particular context, but in any class I have taught. Shy students with unanswered questions perceive no benefit if the instructor is \emph{only} ``engaging.'' {\bf I believe it is fundamental to create an atmosphere of constructive learning, and an environment of tolerance that fosters the notion that \emph{we} (i.e., students and myself) are finding the possible answers \emph{together}}. That is why I feel it is fundamental to reward all sorts of possible questions. It is by asking multiple questions that we can stimulate an environment that allows learning and curiosity. Almost every lecture I have ever given adapts to the students' questions, creating and environment of discussion and ``nutritive'' debate. {\bf Rephrasing and re-framing students' questions allows me to accomplish these goals while still sticking to the syllabus}. 
+
+% Mentoring
+\paragraph{}An important aspect of belonging to an active academic community is the opportunity to {\bf mentor} students, both graduate and undergraduate. For this reason, {\bf I always served as a graduate student mentor}. In doing so, I had the opportunity to help incoming graduate students with their transition to grad school. At the undergraduate level, I always provided advice to interested undergraduate students wanting to pursue a career and/or a PhD/MA in Political Science. \emph{As an undergraduate, I still remember how important for me was to be mentored by faculty members}.
+
+\paragraph{}{Teaching Interests.} Going forward, I would like to teach courses in comparative politics, political economy of development, democracy, state formation, Latin American politics, and applied methods courses (statistical and experimental). However, I can be quite flexible and take care of the demands the department has. Please check my \href{http://www.hectorbahamonde.com/research/}{\texttt{research agenda}} and see how my {\bf teaching and research interests} match. Below I describe a potential list of courses:
 
 
 
@@ -127,15 +153,47 @@ Rancagua, Chile
 \end{itemize}
 
 
-% PART 2
-\input{/Users/hectorbahamonde/Job_Market/Bahamonde_Teaching_Statement_P2.tex}
+\newpage
+\paragraph{}{Sample Student Evaluations and Teaching References}. 
+
+Professor Dr. Ross Baker, Distinguished Professor - Rutgers University, has more details about my teaching skills. His letter can be accessed via the Interfolio system. Please \href{mailto:hector.bahamonde@utu.fi}{let me know} if you wish to read the letter. Also, you can always \href{mailto:hector.bahamonde@utu.fi}{send me an email} to receive the latest teaching evaluations. However, here I summarize some of my student's comments I have received during my three years of teaching assistant experience:
+
+
+{\scriptsize
+\begin{itemize}
+
+\item \emph{``The TA is very responsive when spoken to and is quick to answer questions via email. The TA's willingness to learn with us is also helpful in learning the material and allows us to have nice discussions in class.''}
+
+\item \emph{``My TA showed he knew his subject material because he was able to answer hard and complicated questions efficiently despite it being obvious that English was not his first language.''}
+
+\item \emph{``Hector showed me how to make connections with government terms. He made the big picture seem simpler for me.''}
+
+\item \emph{``Over the break, I came to the conclusion that I want to major in political science. American Government was the first course I ever took related to political science, and I loved it.''}
+
+\item \emph{``I am very grateful for your help and will definitely reach out to you to ask questions about Comparative Politics if that's what I eventually plan on doing. I feel like I'm very new to this whole field of study - mainly because I haven't been in the US for a very long time, and because of the way the government works so differently here than in Pakistan, where I'm from.''}
+
+\item \emph{``The teaching assistant really helped me to think about all the ``why'' aspects of the material. Like for example, ``Why is this important?'' or ``Why does this relate to the material?''.''}
+
+\item \emph{``The best TA in teaching the course material. Each recitation session is well compact with main concepts crucial for understanding the course material.''}
+
+\item \emph{``As an international student who takes the course for requirement, the TA have greatly increase my interest in politics, increase my awareness of politics.''}
+
+\item \emph{``Hector Bahamonde was very engaging and I learned alot in recitation. I liked that he was always prepared with examples to relate what we learn in class to today's world. He has a very cool perspective on politics.''}
+
+\item \emph{``I think everything was perfect with the recitations.''}
+
+\item \emph{``Easily the best TA I have had at Rutgers. He engaged the class, and presented the material in an interesting and extremely organized manner. I was nervous about taking this class because it is not one of my specialties, but after the first recitation I realized that I would learn a lot and Hector really changed my attitude towards taking the class.''}
+
+\item \emph{``Hector encourages us to get involved during recitation. Normally I wouldn't raise my hand as often, but he makes it easy to participate in class.''}
+
+\end{itemize}
+
+}
 
 
 
 
-% ending
-{\input{/Users/hectorbahamonde/Job_Market/ending.tex}\unskip}
-
+\paragraph{}More information is available on my website: \href{http://www.hectorbahamonde.com}{\texttt{www.HectorBahamonde.com}}. Thank you for considering my application. I look forward to hearing from you.
 
 
 
@@ -146,5 +204,4 @@ Rancagua, Chile
 
 %----------------------------------------------------------------------------------------
 
-\end{newlfm}
 \end{document}
