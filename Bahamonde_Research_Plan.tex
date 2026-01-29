@@ -1,166 +1,120 @@
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
 
-\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+% ---------------- Packages ----------------
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
 
-%\usepackage{charter} % Use the Charter font for the document text
-\usepackage{graphics}
+% ---------------- Header with logo ----------------
+\setlength{\headheight}{20pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\includegraphics[width=3cm]{logo}}
+\renewcommand{\headrulewidth}{0pt}
 
-\usepackage{standalone}
+% ---------------- Lists ----------------
+\setlist[itemize]{leftmargin=1.5em}
+\setlist[enumerate]{leftmargin=2em}
 
-%% with this patch, the newlfm should work (BEGIN)
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
-\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
-\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
-\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
-\makeatother
-%% with this patch, the newlfm should work (END)
-
-
-\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
-\includegraphics[width=1.2\linewidth]{/Users/hectorbahamonde/Job_Market/logo.png}}} % Company/institution logo at the top left of the page
-\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
-
-\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
-\newlfmP{addrfromphone} % Print a phone number under the sender's address
-\newlfmP{addrfromemail} % Print an email address under the sender's address
-\PhrPhone{\texttt{p}} % Customize the "Telephone" text
-\PhrEmail{\texttt{e}} % Customize the "E-mail" text
-
-\lthUiuc % Print the company/institution logo
-
-% email input begin
-\newread\fid
-\newcommand{\readfile}[1]% #1 = filename
-{\bgroup
-  \endlinechar=-1
-  \openin\fid=#1
-  \read\fid to\filetext
-  \loop\ifx\empty\filetext\relax% skip over comments
-    \read\fid to\filetext
-  \repeat
-  \closein\fid
-  \global\let\filetext=\filetext
-\egroup}
-\readfile{/Users/hectorbahamonde/Bibliografia_PoliSci/email.txt}
-% email input end
-
-\usepackage{color} % for colors
-\usepackage{hyperref} % for links
-
-\hypersetup{
-  colorlinks = true,
-  urlcolor = blue,
-  pdfpagemode = UseNone
-}
-
-%----------------------------------------------------------------------------------------
-%	YOUR NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-%\namefrom{\vspace{-3cm}Hector Bahamonde, PhD} % Name
-
-\addrfrom{
-{\vspace{-2cm}}\\ % Date
-[12pt]
-{\bf Hector Bahamonde, PhD}\\
-{\color{blue}{\bf Assistant Professor}}\\
-\emph{{\color{blue}Social Sciences Institute}}\\
-{\color{blue}O$'$Higgins University}\\
-Rancagua, Chile
-}
-
-\phonefrom{+1(504) 941-9131} % Phone number
-
-\emailfrom{\href{mailto:\filetext}{\filetext} \\ 
-\texttt{w}: \href{http://www.hectorbahamonde.com}{www.HectorBahamonde.com}\\
-\today, download latest version \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Cover_Letter.pdf}{\texttt{{\color{red}here}}}}% Link to last version
-
-
-%----------------------------------------------------------------------------------------
-%	ADDRESSEE AND GREETING/CLOSING
-%----------------------------------------------------------------------------------------
-
-%\greetto{\vspace{-1cm}Dear Members of the Search Committee,} % Greeting text
-%\closeline{\vspace{-1cm}\includegraphics[width=3cm]{/Users/hectorbahamonde/Administracion/signature.pdf} \hspace{-4cm}} % Closing text
-
-
-
-
-%----------------------------------------------------------------------------------------
-
+% ---------------- Document ----------------
 \begin{document}
-\begin{newlfm}
 
-%----------------------------------------------------------------------------------------
-%	LETTER CONTENT
-%----------------------------------------------------------------------------------------
+\vspace*{-0.6cm}
 
+{\Large \textbf{Research Plan (2026--2029)}}\\
+{\normalsize Hector Bahamonde}\\
+{\normalsize Senior Researcher, INVEST Research Flagship Centre, University of Turku}\\
+{\normalsize \href{mailto:hector.bahamonde@utu.fi}{hector.bahamonde@utu.fi}}
 
+\noindent\rule[0.5ex]{\linewidth}{0.4pt}
 
-\vspace{-2cm}{\bf \huge Research Plan}\\
+% =================================================
+\section*{1. Research Agenda and Core Contribution}
 
-%\vspace{-1cm}
+My research investigates how democratic accountability erodes not only through elite manipulation but also through mass preferences that tolerate, enable, or demand non-electoral forms of governance. Substantively, I focus on democratic backsliding, technocratic delegation, inequality, and clientelism. Conceptually, my work centers on \textbf{losers’ consent}: the conditions under which electoral losers accept outcomes, institutions, and authority arrangements that weaken electoral control.
 
-My research plan during my stay at your institution consists of following parts: 
+Across this agenda, I develop a unified theoretical perspective in which citizens evaluate democratic arrangements as \emph{trade-offs} between ideological representation, material outcomes, and perceived performance advantages. This approach integrates political economy, political psychology, and formal theory, and is implemented using survey experiments, laboratory experiments, and observational data.
 
-\begin{enumerate}
-  \item Publishing ongoing research I have been working on (more details below).
-  \item Developing new research with faculty members, other post-docs and/or graduate students at your institution.
-  \item Attending the main conferences in the discipline.
-  \item Organizing a workshop/mini-conference per year at your institution.
-  \item Also, I would be very happy: 
-    \begin{itemize}
-      \item Giving service to the Department/Institution.
-      \item Teaching and/or advising graduate and/or undergraduate courses (please refer to my \href{http://github.com/hbahamonde/Job_Market/raw/master/Bahamonde_Teaching_Statement.pdf}{teaching statement}).
-      \item Assuming administrative tasks when necessary (sitting in committees, organizing talks, etc.).
-    \end{itemize}
-\end{enumerate}
+Over the next four years, my research will consolidate this agenda into a coherent program that explains when voters accept technocracy, tolerate democratic transgressions, or strategically engage in non-programmatic exchanges.
 
+% =================================================
+\section*{2. Ongoing Research Streams}
 
-After publishing ``\href{https://journals.sub.uni-hamburg.de/giga/jpla/article/view/1121/1128}{Aiming Right at You: Group versus Individual Clientelistic Targeting in Brazil}'' in the \emph{Journal of Politics in Latin America} (2018), ``\href{https://link.springer.com/article/10.1057/s41269-020-00174-4}{Still for Sale: The Micro-dynamics of Vote Selling in the United States, Evidence from a List Experiment}'' in \emph{Acta Politica} (2020), and ``\href{https://doi.org/10.1016/j.ejpoleco.2021.102048}{Inclusive Institutions, Unequal Outcomes: Democracy, State Capacity, and Income Inequality}'' in the \emph{European Journal of Political Economy} (2021), where we had the chance to use a global dataset, I plan on continuing my scholarly work on inequality, clientelism and political development. Always with an important emphasis on political methodology.
+\subsection*{A. Losers’ Consent, Technocracy, and Democratic Backsliding}
 
-I have the following pieces of research in the ``pipeline.'' Please note that all these pieces analyze original data using state-of-the-art methodological techniques. All these papers are currently work in progress.
+Building on my recent work on technocratic delegation and democratic norms, this stream examines how ideological distance from governing coalitions shapes support for expert rule, independent institutions, and non-majoritarian governance. The central theoretical claim is that delegation is conditional: voters accept expert authority when perceived performance gains outweigh ideological losses, and reject it when experts are seen as aligned with incumbents.
 
+Planned extensions include:
+\begin{itemize}
+  \item Comparative survey experiments across Nordic and European democracies.
+  \item Experimental manipulations of expert neutrality, institutional alignment, and crisis framing.
+  \item Formal models linking ideological distance, perceived competence, and delegation preferences.
+\end{itemize}
 
-{\bf Publishing ongoing research}. Within comparative politics, my research explores the intersection between inequality and political development, from a political economy perspective. I situate my research both in the ``structural'' and ``behavior'' paradigms. 
+This stream speaks directly to debates on democratic backsliding, technocracy, and institutional trust, and targets journals such as \emph{AJPS}, \emph{APSR}, and \emph{Comparative Political Studies}.
 
-For the former, I intend to publish a chapter from my dissertation entitled ``\href{https://github.com/hbahamonde/Earthquake_Paper/raw/master/Bahamonde_Earthquake_Paper.pdf}{\input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/title.txt}\unskip}.'' \input{/Users/hectorbahamonde/Dissertation/Papers/Earthquake_Paper/abstract.txt}\unskip 
+\subsection*{B. Inequality, Risk, and Anti-Systemic Politics}
 
-\begin{enumerate}
+A second stream studies how economic inequality reshapes political behavior through loss aversion and risk sensitivity. Drawing on prospect theory, I analyze how voters exposed to economic losses become more willing to support populist, anti-systemic, or authoritarian alternatives, even when these undermine democratic accountability.
 
-  % Andrea paper
-  \item ``\href{https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/Vote_Selling_Bahamonde_Canales_Paper.pdf}{{\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/title.txt}\unskip}}.'' {\bf This is an economic experiment on clientelism}. {\input{/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/abstract.txt}\unskip}
+Future work will:
+\begin{itemize}
+  \item Combine longitudinal survey experiments with macro-economic shocks.
+  \item Integrate affective polarization and identity substitution mechanisms.
+  \item Extend analyses beyond voters to include political candidates and elites.
+\end{itemize}
 
-  % Cristobal paper
-  \item ``\href{https://github.com/hbahamonde/Conjoint_US/raw/master/Bahamonde_Quininao_Conjoint_Letter_PA.pdf}{{\input{/Users/hectorbahamonde/research/Conjoint_US/title_letter.txt}\unskip}}'' ({\input{/Users/hectorbahamonde/research/Conjoint_US/status_letter.txt}\unskip}) and ``\href{https://github.com/hbahamonde/Conjoint_US/raw/master/Bahamonde_Quininao_Conjoint.pdf}{{\input{/Users/hectorbahamonde/research/Conjoint_US/title.txt}\unskip}}'' ({\input{/Users/hectorbahamonde/research/Conjoint_US/status.txt}\unskip}). {\bf Using a novel dataset, I designed a conjoint experiment to test which democratic values should ``fail'' in order to produce vote-sellers}. {\input{/Users/hectorbahamonde/research/Conjoint_US/abstract.txt}\unskip}.
+This research contributes to political economy accounts of populism and democratic erosion and builds bridges between inequality research and political psychology.
 
-  % Igor paper
-  \item {\bf COVID and Inequality}:
-    \begin{itemize}
-      \item \href{https://raw.githubusercontent.com/hbahamonde/Tobalaba/main/abstract.txt}{Skyrocketed Inequality and (Un)lockdown Political Elites in Chile: Aerodrome Usage during Pandemic Times}. {\input{/Users/hectorbahamonde/research/Tobalaba/abstract.txt}\unskip}. 
-      \item \href{https://github.com/hbahamonde/Bus/raw/main/abstract.txt}{The Bus of Inequality: Public Transportation and COVID in Santiago}. {\input{/Users/hectorbahamonde/research/Bus/abstract.txt}\unskip}. 
-    \end{itemize}
-\end{enumerate}
+\subsection*{C. Clientelism, Vote Buying, and Vote Selling}
 
+My third research stream reorients the study of clientelism by modeling voters as strategic actors rather than passive recipients. Using formal theory and laboratory experiments, I analyze how institutional rules determining who initiates exchanges (parties vs voters) reshape targeting strategies and surplus distribution.
 
-Given that I have made considerable progress in all these papers, I am sure they will be (well) published while spending time at your Institution.
+Over the next four years, I will:
+\begin{itemize}
+  \item Extend laboratory designs to comparative and online settings.
+  \item Study how electoral risk and uncertainty condition strategic vote selling.
+  \item Link clientelism to broader questions of democratic accountability and inequality.
+\end{itemize}
 
-{\bf Developing new research with faculty members, other post-docs and/or graduate students at your institution}. As you can see, I collaborate with colleagues from different disciplines, scholarly interests, genders, nationalities and degrees of seniority. Following this line, I will be very happy to collaborate with you and other colleagues. I am very sure I will have something interesting to bring to the table, both from a substantive and methodological aspects. {\bf I look forward to working and publishing with you!}
+This line of work advances experimental political economy and contributes to debates on non-programmatic representation.
 
-{\bf Reaching out}. Finally, during my time at your Institution, I will take very seriously attending the main conferences in the discipline and organizing a workshop/mini-conference per year at your institution. Every year, since grad school, I attend two to three conferences per year. I have also plenty of experiencing organizing seminars and mini-workshops. 
+% =================================================
+\section*{3. Methods and Research Design}
 
-% ending
-{\input{/Users/hectorbahamonde/Job_Market/ending.tex}\unskip}
+Methodologically, my research combines:
+\begin{itemize}
+  \item Formal theoretical modeling to clarify mechanisms.
+  \item Survey and laboratory experiments to identify causal effects.
+  \item Observational and register data to assess external validity.
+\end{itemize}
 
+A key priority is addressing social desirability bias and endogeneity through experimental designs and longitudinal data. I also emphasize replication, open science practices, and pre-registration.
 
-\vspace{-10cm}
+% =================================================
+\section*{4. Four-Year Plan and Outputs (2026--2029)}
 
+\begin{itemize}
+  \item \textbf{Year 1--2:} Completion and publication of core papers on technocratic delegation and democratic backsliding; development of comparative extensions.
+  \item \textbf{Year 2--3:} New experimental projects on inequality, risk, and anti-systemic voting; initiation of comparative data collection.
+  \item \textbf{Year 3--4:} Integration of research streams into a unified theoretical framework; preparation of a monograph or synthetic articles.
+\end{itemize}
 
-%----------------------------------------------------------------------------------------
+Expected outputs include 6--8 peer-reviewed journal articles, collaborative grant applications, and policy-facing publications.
 
-\end{newlfm}
+% =================================================
+\section*{5. Fit, Collaboration, and Impact}
+
+The proposed agenda aligns closely with research strengths in political economy, democracy, and inequality. It is designed to foster international collaboration, attract external funding, and contribute to public debates on democratic resilience.
+
+\vspace{0.3cm}
+\noindent\rule[0.5ex]{\linewidth}{0.4pt}
+
+{\small Last updated: \today}
+
 \end{document}
